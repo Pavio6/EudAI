@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import messagebox
 
+from services import progress_service
+
 
 class DashboardView(tk.Frame):
     def __init__(self, parent: tk.Misc, controller) -> None:
@@ -23,6 +25,34 @@ class DashboardView(tk.Frame):
         self.sen_value = tk.Label(info_frame, text="-")
         self.sen_value.grid(row=1, column=1, sticky="w", padx=5)
 
+        stats_frame = tk.LabelFrame(self, text="学习进度", padx=10, pady=10)
+        stats_frame.pack(pady=10, padx=20, fill="x")
+        stats_frame.columnconfigure(1, weight=1)
+
+        tk.Label(stats_frame, text="总答题数：").grid(row=0, column=0, sticky="w", pady=2)
+        self.total_attempts_label = tk.Label(stats_frame, text="0")
+        self.total_attempts_label.grid(row=0, column=1, sticky="w", pady=2)
+
+        tk.Label(stats_frame, text="正确率：").grid(row=1, column=0, sticky="w", pady=2)
+        self.accuracy_label = tk.Label(stats_frame, text="0/0 (0%)")
+        self.accuracy_label.grid(row=1, column=1, sticky="w", pady=2)
+
+        tk.Label(stats_frame, text="今日答题数：").grid(row=2, column=0, sticky="w", pady=2)
+        self.today_attempts_label = tk.Label(stats_frame, text="0")
+        self.today_attempts_label.grid(row=2, column=1, sticky="w", pady=2)
+
+        tk.Label(stats_frame, text="平均用时（秒）：").grid(row=3, column=0, sticky="w", pady=2)
+        self.avg_time_label = tk.Label(stats_frame, text="0")
+        self.avg_time_label.grid(row=3, column=1, sticky="w", pady=2)
+
+        tk.Label(stats_frame, text="最近10题平均难度：").grid(row=4, column=0, sticky="w", pady=2)
+        self.recent_difficulty_label = tk.Label(stats_frame, text="0")
+        self.recent_difficulty_label.grid(row=4, column=1, sticky="w", pady=2)
+
+        tk.Label(stats_frame, text="最近10题正确率：").grid(row=5, column=0, sticky="w", pady=2)
+        self.recent_accuracy_label = tk.Label(stats_frame, text="0%")
+        self.recent_accuracy_label.grid(row=5, column=1, sticky="w", pady=2)
+
         btn_frame = tk.Frame(self)
         btn_frame.pack(pady=20)
 
@@ -41,10 +71,46 @@ class DashboardView(tk.Frame):
         if not user:
             self.username_value.config(text="未登录")
             self.sen_value.config(text="-")
+            self._reset_stats()
             return
 
         self.username_value.config(text=user.get("username", "-"))
         self.sen_value.config(text=user.get("sen_profile", "-"))
+        self._refresh_stats()
+
+    def _reset_stats(self) -> None:
+        self.total_attempts_label.config(text="0")
+        self.accuracy_label.config(text="0/0 (0%)")
+        self.today_attempts_label.config(text="0")
+        self.avg_time_label.config(text="0")
+        self.recent_difficulty_label.config(text="0")
+        self.recent_accuracy_label.config(text="0%")
+
+    def _refresh_stats(self) -> None:
+        user_id = getattr(self.controller, "current_user_id", None)
+        if not user_id:
+            self._reset_stats()
+            return
+
+        overall = progress_service.get_overall_stats(user_id)
+        today = progress_service.get_today_stats(user_id)
+        recent = progress_service.get_recent_stats(user_id)
+
+        total = overall.get("total_attempts", 0) or 0
+        correct = overall.get("correct_attempts", 0) or 0
+        accuracy_pct = f"{overall.get('accuracy', 0) * 100:.0f}%"
+        self.total_attempts_label.config(text=str(total))
+        self.accuracy_label.config(text=f"{correct}/{total} ({accuracy_pct})")
+
+        self.today_attempts_label.config(text=str(today.get("today_attempts", 0) or 0))
+        avg_time = overall.get("avg_time_spent_sec", 0) or 0
+        self.avg_time_label.config(text=f"{avg_time:.1f}")
+
+        self.recent_difficulty_label.config(
+            text=f"{(recent.get('recent_avg_difficulty', 0) or 0):.2f}"
+        )
+        recent_acc_pct = f"{(recent.get('recent_accuracy', 0) or 0) * 100:.0f}%"
+        self.recent_accuracy_label.config(text=recent_acc_pct)
 
     def start_quiz(self) -> None:
         if not getattr(self.controller, "current_user", None):
