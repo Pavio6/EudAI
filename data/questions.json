@@ -1,0 +1,252 @@
+[
+  {
+    "question_id": 1,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 1,
+    "question_text": "What is 2 + 3?",
+    "options": { "A": "4", "B": "5", "C": "6", "D": "7" },
+    "correct_option": "B",
+    "explanation": "2 plus 3 equals 5."
+  },
+  {
+    "question_id": 2,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 1,
+    "question_text": "What is 1 + 6?",
+    "options": { "A": "6", "B": "7", "C": "8", "D": "9" },
+    "correct_option": "B",
+    "explanation": "1 plus 6 equals 7."
+  },
+  {
+    "question_id": 3,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 1,
+    "question_text": "What is 7 - 2?",
+    "options": { "A": "4", "B": "5", "C": "6", "D": "7" },
+    "correct_option": "B",
+    "explanation": "7 minus 2 leaves 5."
+  },
+  {
+    "question_id": 4,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 1,
+    "question_text": "What is 9 - 4?",
+    "options": { "A": "4", "B": "5", "C": "6", "D": "7" },
+    "correct_option": "B",
+    "explanation": "9 minus 4 leaves 5."
+  },
+  {
+    "question_id": 5,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 1,
+    "question_text": "What is 3 + 4?",
+    "options": { "A": "6", "B": "7", "C": "8", "D": "9" },
+    "correct_option": "B",
+    "explanation": "3 plus 4 equals 7."
+  },
+  {
+    "question_id": 6,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 2,
+    "question_text": "What is 12 + 5?",
+    "options": { "A": "15", "B": "16", "C": "17", "D": "18" },
+    "correct_option": "C",
+    "explanation": "12 plus 5 equals 17."
+  },
+  {
+    "question_id": 7,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 2,
+    "question_text": "What is 15 - 7?",
+    "options": { "A": "6", "B": "7", "C": "8", "D": "9" },
+    "correct_option": "C",
+    "explanation": "15 minus 7 equals 8."
+  },
+  {
+    "question_id": 8,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 2,
+    "question_text": "What is 18 + 6?",
+    "options": { "A": "22", "B": "23", "C": "24", "D": "25" },
+    "correct_option": "C",
+    "explanation": "18 plus 6 equals 24."
+  },
+  {
+    "question_id": 9,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 2,
+    "question_text": "What is 20 - 9?",
+    "options": { "A": "9", "B": "10", "C": "11", "D": "12" },
+    "correct_option": "B",
+    "explanation": "20 minus 9 equals 11."
+  },
+  {
+    "question_id": 10,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 2,
+    "question_text": "What is 14 + 9?",
+    "options": { "A": "22", "B": "23", "C": "24", "D": "25" },
+    "correct_option": "B",
+    "explanation": "14 plus 9 equals 23."
+  },
+  {
+    "question_id": 11,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 3,
+    "question_text": "What is 125 + 87?",
+    "options": { "A": "202", "B": "211", "C": "212", "D": "213" },
+    "correct_option": "C",
+    "explanation": "125 plus 87 equals 212, check place value: 5+7, 2+8, 1."
+  },
+  {
+    "question_id": 12,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 3,
+    "question_text": "What is 340 - 128?",
+    "options": { "A": "202", "B": "212", "C": "222", "D": "232" },
+    "correct_option": "B",
+    "explanation": "340 minus 128 equals 212 by borrowing."
+  },
+  {
+    "question_id": 13,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 3,
+    "question_text": "What is 267 + 145?",
+    "options": { "A": "402", "B": "412", "C": "422", "D": "432" },
+    "correct_option": "B",
+    "explanation": "267 plus 145 equals 412."
+  },
+  {
+    "question_id": 14,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 3,
+    "question_text": "What is 580 - 267?",
+    "options": { "A": "303", "B": "313", "C": "323", "D": "333" },
+    "correct_option": "B",
+    "explanation": "580 minus 267 equals 313."
+  },
+  {
+    "question_id": 15,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 3,
+    "question_text": "What is 356 + 189?",
+    "options": { "A": "533", "B": "545", "C": "545", "D": "555" },
+    "correct_option": "B",
+    "explanation": "356 plus 189 equals 545."
+  },
+  {
+    "question_id": 16,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 4,
+    "question_text": "What is 1,245 + 3,678?",
+    "options": { "A": "4,883", "B": "4,893", "C": "4,923", "D": "4,933" },
+    "correct_option": "C",
+    "explanation": "1,245 plus 3,678 equals 4,923; add each column with carrying."
+  },
+  {
+    "question_id": 17,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 4,
+    "question_text": "What is 9,002 - 4,389?",
+    "options": { "A": "4,513", "B": "4,603", "C": "4,613", "D": "4,703" },
+    "correct_option": "C",
+    "explanation": "Borrowing across zeros leaves 4,613."
+  },
+  {
+    "question_id": 18,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 4,
+    "question_text": "What is 7,456 + 2,789?",
+    "options": { "A": "10,145", "B": "10,245", "C": "10,255", "D": "10,345" },
+    "correct_option": "B",
+    "explanation": "Add thousands, hundreds, tens, and ones to get 10,245."
+  },
+  {
+    "question_id": 19,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 4,
+    "question_text": "What is 12,304 - 6,789?",
+    "options": { "A": "5,505", "B": "5,515", "C": "5,525", "D": "5,535" },
+    "correct_option": "B",
+    "explanation": "12,304 minus 6,789 equals 5,515."
+  },
+  {
+    "question_id": 20,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 4,
+    "question_text": "What is 8,120 - 2,987?",
+    "options": { "A": "5,123", "B": "5,133", "C": "5,143", "D": "5,153" },
+    "correct_option": "B",
+    "explanation": "8,120 minus 2,987 equals 5,133."
+  },
+  {
+    "question_id": 21,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 5,
+    "question_text": "What is 23,457 + 56,789?",
+    "options": { "A": "80,146", "B": "80,236", "C": "80,246", "D": "80,256" },
+    "correct_option": "C",
+    "explanation": "Summing each place yields 80,246."
+  },
+  {
+    "question_id": 22,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 5,
+    "question_text": "What is 90,005 - 47,869?",
+    "options": { "A": "42,036", "B": "42,126", "C": "42,136", "D": "42,146" },
+    "correct_option": "C",
+    "explanation": "Borrow carefully to get 42,136."
+  },
+  {
+    "question_id": 23,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 5,
+    "question_text": "What is 345,678 + 123,456?",
+    "options": { "A": "468,134", "B": "468,234", "C": "469,134", "D": "469,234" },
+    "correct_option": "C",
+    "explanation": "Add hundreds of thousands through ones to reach 469,134."
+  },
+  {
+    "question_id": 24,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 5,
+    "question_text": "What is 503,210 - 287,654?",
+    "options": { "A": "215,446", "B": "215,556", "C": "215,566", "D": "215,576" },
+    "correct_option": "B",
+    "explanation": "Subtract each place with regrouping: 503,210 - 287,654 = 215,556."
+  },
+  {
+    "question_id": 25,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 5,
+    "question_text": "What is 789,321 + 654,987?",
+    "options": { "A": "1,434,108", "B": "1,444,108", "C": "1,444,308", "D": "1,444,908" },
+    "correct_option": "C",
+    "explanation": "789,321 plus 654,987 equals 1,444,308."
+  }
+]
