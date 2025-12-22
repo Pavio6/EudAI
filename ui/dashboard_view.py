@@ -120,7 +120,7 @@ class DashboardView(tk.Frame):
         self.controller.show_frame("QuizView")
 
     def open_settings(self) -> None:
-        messagebox.showinfo("设置", "Coming soon")
+        self.controller.show_frame("SettingsView")
 
     def logout(self) -> None:
         self.controller.set_current_user(None)

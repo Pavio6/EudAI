@@ -2,7 +2,7 @@ import time
 import tkinter as tk
 from tkinter import messagebox
 
-from services import quiz_service
+from services import quiz_service, tts_service
 
 
 class QuizView(tk.Frame):
@@ -15,6 +15,7 @@ class QuizView(tk.Frame):
         self.current_question: dict | None = None
         self.session_id: int | None = None
         self.question_start_time: float = 0.0
+        self.used_tts_for_question = False
         self._build_widgets()
 
     def _build_widgets(self) -> None:
@@ -44,8 +45,10 @@ class QuizView(tk.Frame):
 
         actions = tk.Frame(self)
         actions.pack(pady=10)
-        tk.Button(actions, text="下一题", command=self.next_question).grid(row=0, column=0, padx=8)
-        tk.Button(actions, text="结束并返回主页", command=self.end_quiz).grid(row=0, column=1, padx=8)
+        self.tts_button = tk.Button(actions, text="朗读题目", command=self.speak_question)
+        self.tts_button.grid(row=0, column=0, padx=8)
+        tk.Button(actions, text="下一题", command=self.next_question).grid(row=0, column=1, padx=8)
+        tk.Button(actions, text="结束并返回主页", command=self.end_quiz).grid(row=0, column=2, padx=8)
 
     def on_show(self) -> None:
         user = getattr(self.controller, "current_user", None)
@@ -61,6 +64,7 @@ class QuizView(tk.Frame):
 
     def load_question(self) -> None:
         self.feedback_label.config(text="")
+        self.used_tts_for_question = False
         question = quiz_service.get_random_question(
             self.subject, self.difficulty, self.seen_question_ids
         )
@@ -87,6 +91,7 @@ class QuizView(tk.Frame):
                 btn.pack_forget()
 
         self.question_start_time = time.monotonic()
+        self._update_tts_visibility()
 
     def handle_answer(self, option_key: str) -> None:
         if not self.current_question:
@@ -102,7 +107,7 @@ class QuizView(tk.Frame):
             selected_option=option_key,
             is_correct=is_correct,
             time_spent_sec=elapsed,
-            used_tts=False,
+            used_tts=self.used_tts_for_question,
         )
 
         explanation = self.current_question.get("explanation") or ""
@@ -124,3 +129,37 @@ class QuizView(tk.Frame):
             quiz_service.end_session(self.session_id)
             self.session_id = None
         self.controller.show_frame("DashboardView")
+
+    def _update_tts_visibility(self) -> None:
+        user = getattr(self.controller, "current_user", None)
+        enabled = bool(user.get("tts_enabled")) if user else False
+        if enabled:
+            self.tts_button.grid()
+        else:
+            self.tts_button.grid_remove()
+
+    def speak_question(self) -> None:
+        if not self.current_question:
+            return
+        try:
+            filepath = tts_service.speak(
+                text=self.current_question.get("question_text", ""),
+                cache_key=f"q_{self.current_question['question_id']}",
+            )
+        except ImportError:
+            messagebox.showerror("错误", "未安装 gTTS，请运行：pip install -r requirements.txt")
+            return
+        except Exception as exc:
+            messagebox.showerror("错误", f"TTS 生成失败：{exc}")
+            return
+
+        try:
+            tts_service.play(filepath)
+        except ImportError as exc:
+            messagebox.showerror("错误", f"音频播放失败：{exc}")
+            return
+        except Exception as exc:
+            messagebox.showerror("错误", f"音频播放失败：{exc}")
+            return
+
+        self.used_tts_for_question = True

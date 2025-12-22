@@ -56,3 +56,11 @@ def list_users() -> list[Dict[str, Any]]:
         )
         keys = [column[0] for column in cursor.description]
         return [dict(zip(keys, row)) for row in cursor.fetchall()]
+
+
+def update_settings(user_id: int, tts_enabled: bool, high_contrast: bool) -> None:
+    with get_conn() as conn:
+        conn.execute(
+            "UPDATE users SET tts_enabled = ?, high_contrast = ? WHERE user_id = ?",
+            (1 if tts_enabled else 0, 1 if high_contrast else 0, user_id),
+        )
