@@ -45,15 +45,15 @@ class QuizView(tk.Frame):
 
         actions = tk.Frame(self)
         actions.pack(pady=10)
-        self.tts_button = tk.Button(actions, text="朗读题目", command=self.speak_question)
+        self.tts_button = tk.Button(actions, text="Read question", command=self.speak_question)
         self.tts_button.grid(row=0, column=0, padx=8)
-        tk.Button(actions, text="下一题", command=self.next_question).grid(row=0, column=1, padx=8)
-        tk.Button(actions, text="结束并返回主页", command=self.end_quiz).grid(row=0, column=2, padx=8)
+        tk.Button(actions, text="Next question", command=self.next_question).grid(row=0, column=1, padx=8)
+        tk.Button(actions, text="Finish and home", command=self.end_quiz).grid(row=0, column=2, padx=8)
 
     def on_show(self) -> None:
         user = getattr(self.controller, "current_user", None)
         if not user:
-            messagebox.showerror("错误", "请先登录")
+            messagebox.showerror("Error", "Please sign in first.")
             self.controller.show_frame("LoginView")
             return
         if self.session_id:
@@ -69,7 +69,7 @@ class QuizView(tk.Frame):
             self.subject, self.difficulty, self.seen_question_ids
         )
         if not question:
-            messagebox.showinfo("提示", "没有更多题目，返回主页")
+            messagebox.showinfo("Info", "No more questions. Returning to dashboard.")
             self.end_quiz()
             return
         self.current_question = question
@@ -111,9 +111,9 @@ class QuizView(tk.Frame):
         )
 
         explanation = self.current_question.get("explanation") or ""
-        result_text = "回答正确" if is_correct else f"回答错误，正确答案：{correct_option}"
+        result_text = "Correct!" if is_correct else f"Incorrect. Correct answer: {correct_option}"
         if explanation:
-            result_text += f"\n解析：{explanation}"
+            result_text += f"\nExplanation: {explanation}"
         self.feedback_label.config(text=result_text)
 
         for btn in self.option_buttons.values():
@@ -147,19 +147,19 @@ class QuizView(tk.Frame):
                 cache_key=f"q_{self.current_question['question_id']}",
             )
         except ImportError:
-            messagebox.showerror("错误", "未安装 gTTS，请运行：pip install -r requirements.txt")
+            messagebox.showerror("Error", "gTTS is not installed. Please run: pip install -r requirements.txt")
             return
         except Exception as exc:
-            messagebox.showerror("错误", f"TTS 生成失败：{exc}")
+            messagebox.showerror("Error", f"Could not generate audio: {exc}")
             return
 
         try:
             tts_service.play(filepath)
         except ImportError as exc:
-            messagebox.showerror("错误", f"音频播放失败：{exc}")
+            messagebox.showerror("Error", f"Audio playback failed: {exc}")
             return
         except Exception as exc:
-            messagebox.showerror("错误", f"音频播放失败：{exc}")
+            messagebox.showerror("Error", f"Audio playback failed: {exc}")
             return
 
         self.used_tts_for_question = True

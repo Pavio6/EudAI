@@ -13,31 +13,31 @@ class SettingsView(tk.Frame):
         self._build_widgets()
 
     def _build_widgets(self) -> None:
-        header = tk.Label(self, text="设置", font=("Arial", 18))
+        header = tk.Label(self, text="Settings", font=("Arial", 18))
         header.pack(pady=(30, 10))
 
         form = tk.Frame(self)
         form.pack(pady=10, padx=20)
         form.columnconfigure(0, weight=1)
 
-        tk.Checkbutton(form, text="启用 TTS", variable=self.tts_enabled).grid(
+        tk.Checkbutton(form, text="Enable TTS", variable=self.tts_enabled).grid(
             row=0, column=0, sticky="w", pady=5
         )
-        tk.Checkbutton(form, text="高对比度模式", variable=self.high_contrast).grid(
+        tk.Checkbutton(form, text="High contrast mode", variable=self.high_contrast).grid(
             row=1, column=0, sticky="w", pady=5
         )
 
         actions = tk.Frame(self)
         actions.pack(pady=15)
-        tk.Button(actions, text="保存", command=self.handle_save).grid(row=0, column=0, padx=8)
+        tk.Button(actions, text="Save", command=self.handle_save).grid(row=0, column=0, padx=8)
         tk.Button(
-            actions, text="返回", command=lambda: self.controller.show_frame("DashboardView")
+            actions, text="Back", command=lambda: self.controller.show_frame("DashboardView")
         ).grid(row=0, column=1, padx=8)
 
     def on_show(self) -> None:
         user = getattr(self.controller, "current_user", None)
         if not user:
-            messagebox.showerror("错误", "请先登录")
+            messagebox.showerror("Error", "Please sign in first.")
             self.controller.show_frame("LoginView")
             return
         fresh_user = user_service.get_user_by_id(user["user_id"])
@@ -50,7 +50,7 @@ class SettingsView(tk.Frame):
     def handle_save(self) -> None:
         user = getattr(self.controller, "current_user", None)
         if not user:
-            messagebox.showerror("错误", "请先登录")
+            messagebox.showerror("Error", "Please sign in first.")
             self.controller.show_frame("LoginView")
             return
 
@@ -63,4 +63,4 @@ class SettingsView(tk.Frame):
         if updated_user:
             self.controller.set_current_user(updated_user)
             self.controller.apply_theme(bool(updated_user.get("high_contrast", 0)))
-        messagebox.showinfo("成功", "保存成功")
+        messagebox.showinfo("Saved", "Settings updated successfully.")

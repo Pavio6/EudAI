@@ -25,3 +25,8 @@ Notes
 -----
 - All seed inserts are idempotent; rerunning `main.py` will not duplicate rows.
 - Foreign keys are enforced (`PRAGMA foreign_keys=ON`).
+
+Next Steps
+----------
+- Expand the question bank across more subjects and wire up difficulty progression.
+- Extend progress reports with per-topic breakdowns and CSV export support.

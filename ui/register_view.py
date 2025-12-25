@@ -15,7 +15,7 @@ class RegisterView(tk.Frame):
         self._build_widgets()
 
     def _build_widgets(self) -> None:
-        header = tk.Label(self, text="EduAI 注册", font=("Arial", 18))
+        header = tk.Label(self, text="EduAI Register", font=("Arial", 18))
         header.pack(pady=(30, 10))
 
         form_wrapper = tk.Frame(self)
@@ -26,23 +26,23 @@ class RegisterView(tk.Frame):
         form.pack_propagate(False)
         form.columnconfigure(1, weight=1)
 
-        tk.Label(form, text="用户名：").grid(row=0, column=0, sticky="w", pady=5)
+        tk.Label(form, text="Username:").grid(row=0, column=0, sticky="w", pady=5)
         tk.Entry(form, textvariable=self.username_var, width=30).grid(
             row=0, column=1, sticky="ew", pady=5
         )
 
-        tk.Label(form, text="支持需求：").grid(row=1, column=0, sticky="w", pady=5)
+        tk.Label(form, text="Support needs:").grid(row=1, column=0, sticky="w", pady=5)
         self.profile_dropdown = ttk.Combobox(
             form, textvariable=self.sen_profile, values=SEN_PROFILES, state="readonly"
         )
         self.profile_dropdown.grid(row=1, column=1, sticky="ew", pady=5)
         self.profile_dropdown.current(0)
 
-        action_btn = tk.Button(self, text="创建账号", command=self.handle_register, width=20)
+        action_btn = tk.Button(self, text="Create account", command=self.handle_register, width=20)
         action_btn.pack(pady=(10, 10))
 
         back_btn = tk.Button(
-            self, text="返回登录", command=lambda: self.controller.show_frame("LoginView")
+            self, text="Back to login", command=lambda: self.controller.show_frame("LoginView")
         )
         back_btn.pack()
 
@@ -54,18 +54,18 @@ class RegisterView(tk.Frame):
         username = self.username_var.get().strip()
         profile = self.sen_profile.get()
         if not username:
-            messagebox.showerror("错误", "用户名不能为空")
+            messagebox.showerror("Error", "Username cannot be empty.")
             return
 
         try:
             user_id = user_service.create_user(username, profile)
         except ValueError as exc:
-            messagebox.showerror("错误", str(exc))
+            messagebox.showerror("Error", str(exc))
             return
 
-        messagebox.showinfo("成功", "注册成功")
+        messagebox.showinfo("Success", "Registered successfully.")
         login_view = self.controller.frames.get("LoginView")
         if login_view:
             login_view.set_username(username)
-        # 登录页或直接登录都可，这里返回登录页
+        # Return to login page after registration
         self.controller.show_frame("LoginView")

@@ -69,7 +69,6 @@ class App(tk.Tk):
             self._set_colors_recursive(frame, colors)
 
     def _set_colors_recursive(self, widget: tk.Widget, colors: dict) -> None:
-        high_contrast = self.high_contrast_active
         cfg = {}
         if isinstance(widget, tk.Button):
             cfg = {

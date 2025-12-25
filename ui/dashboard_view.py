@@ -11,65 +11,65 @@ class DashboardView(tk.Frame):
         self._build_widgets()
 
     def _build_widgets(self) -> None:
-        header = tk.Label(self, text="Dashboard", font=("Arial", 18))
+        header = tk.Label(self, text="EduAI Dashboard", font=("Arial", 18))
         header.pack(pady=(30, 10))
 
         info_frame = tk.Frame(self)
         info_frame.pack(pady=10)
 
-        tk.Label(info_frame, text="欢迎：").grid(row=0, column=0, sticky="e", padx=5)
+        tk.Label(info_frame, text="Welcome:").grid(row=0, column=0, sticky="e", padx=5)
         self.username_value = tk.Label(info_frame, text="-")
         self.username_value.grid(row=0, column=1, sticky="w", padx=5)
 
-        tk.Label(info_frame, text="支持需求：").grid(row=1, column=0, sticky="e", padx=5)
+        tk.Label(info_frame, text="Support needs:").grid(row=1, column=0, sticky="e", padx=5)
         self.sen_value = tk.Label(info_frame, text="-")
         self.sen_value.grid(row=1, column=1, sticky="w", padx=5)
 
-        stats_frame = tk.LabelFrame(self, text="学习进度", padx=10, pady=10)
+        stats_frame = tk.LabelFrame(self, text="Progress", padx=10, pady=10)
         stats_frame.pack(pady=10, padx=20, fill="x")
         stats_frame.columnconfigure(1, weight=1)
 
-        tk.Label(stats_frame, text="总答题数：").grid(row=0, column=0, sticky="w", pady=2)
+        tk.Label(stats_frame, text="Total questions:").grid(row=0, column=0, sticky="w", pady=2)
         self.total_attempts_label = tk.Label(stats_frame, text="0")
         self.total_attempts_label.grid(row=0, column=1, sticky="w", pady=2)
 
-        tk.Label(stats_frame, text="正确率：").grid(row=1, column=0, sticky="w", pady=2)
+        tk.Label(stats_frame, text="Accuracy:").grid(row=1, column=0, sticky="w", pady=2)
         self.accuracy_label = tk.Label(stats_frame, text="0/0 (0%)")
         self.accuracy_label.grid(row=1, column=1, sticky="w", pady=2)
 
-        tk.Label(stats_frame, text="今日答题数：").grid(row=2, column=0, sticky="w", pady=2)
+        tk.Label(stats_frame, text="Today:").grid(row=2, column=0, sticky="w", pady=2)
         self.today_attempts_label = tk.Label(stats_frame, text="0")
         self.today_attempts_label.grid(row=2, column=1, sticky="w", pady=2)
 
-        tk.Label(stats_frame, text="平均用时（秒）：").grid(row=3, column=0, sticky="w", pady=2)
+        tk.Label(stats_frame, text="Avg time (sec):").grid(row=3, column=0, sticky="w", pady=2)
         self.avg_time_label = tk.Label(stats_frame, text="0")
         self.avg_time_label.grid(row=3, column=1, sticky="w", pady=2)
 
-        tk.Label(stats_frame, text="最近10题平均难度：").grid(row=4, column=0, sticky="w", pady=2)
+        tk.Label(stats_frame, text="Last 10: avg difficulty:").grid(row=4, column=0, sticky="w", pady=2)
         self.recent_difficulty_label = tk.Label(stats_frame, text="0")
         self.recent_difficulty_label.grid(row=4, column=1, sticky="w", pady=2)
 
-        tk.Label(stats_frame, text="最近10题正确率：").grid(row=5, column=0, sticky="w", pady=2)
+        tk.Label(stats_frame, text="Last 10: accuracy:").grid(row=5, column=0, sticky="w", pady=2)
         self.recent_accuracy_label = tk.Label(stats_frame, text="0%")
         self.recent_accuracy_label.grid(row=5, column=1, sticky="w", pady=2)
 
         btn_frame = tk.Frame(self)
         btn_frame.pack(pady=20)
 
-        tk.Button(btn_frame, text="开始测验", command=self.start_quiz).grid(
+        tk.Button(btn_frame, text="Start quiz", command=self.start_quiz).grid(
             row=0, column=0, padx=10, pady=5
         )
-        tk.Button(btn_frame, text="设置", command=self.open_settings).grid(
+        tk.Button(btn_frame, text="Settings", command=self.open_settings).grid(
             row=0, column=1, padx=10, pady=5
         )
-        tk.Button(btn_frame, text="退出登录", command=self.logout).grid(
+        tk.Button(btn_frame, text="Log out", command=self.logout).grid(
             row=0, column=2, padx=10, pady=5
         )
 
     def on_show(self) -> None:
         user = getattr(self.controller, "current_user", None)
         if not user:
-            self.username_value.config(text="未登录")
+            self.username_value.config(text="Not signed in")
             self.sen_value.config(text="-")
             self._reset_stats()
             return
@@ -114,7 +114,7 @@ class DashboardView(tk.Frame):
 
     def start_quiz(self) -> None:
         if not getattr(self.controller, "current_user", None):
-            messagebox.showerror("错误", "请先登录")
+            messagebox.showerror("Error", "Please sign in first.")
             self.controller.show_frame("LoginView")
             return
         self.controller.show_frame("QuizView")
