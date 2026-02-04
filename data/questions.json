@@ -4,249 +4,2999 @@
     "subject": "Math",
     "topic": "Addition",
     "difficulty": 1,
-    "question_text": "What is 2 + 3?",
-    "options": { "A": "4", "B": "5", "C": "6", "D": "7" },
-    "correct_option": "B",
-    "explanation": "2 plus 3 equals 5."
+    "question_text": "What is 1 + 5?",
+    "options": {
+      "A": "3",
+      "B": "-1",
+      "C": "0",
+      "D": "6"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 6."
   },
   {
     "question_id": 2,
     "subject": "Math",
     "topic": "Addition",
     "difficulty": 1,
-    "question_text": "What is 1 + 6?",
-    "options": { "A": "6", "B": "7", "C": "8", "D": "9" },
-    "correct_option": "B",
-    "explanation": "1 plus 6 equals 7."
+    "question_text": "What is 1 + 2?",
+    "options": {
+      "A": "-1",
+      "B": "9",
+      "C": "0",
+      "D": "3"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 3."
   },
   {
     "question_id": 3,
     "subject": "Math",
-    "topic": "Subtraction",
+    "topic": "Division",
     "difficulty": 1,
-    "question_text": "What is 7 - 2?",
-    "options": { "A": "4", "B": "5", "C": "6", "D": "7" },
-    "correct_option": "B",
-    "explanation": "7 minus 2 leaves 5."
+    "question_text": "What is 18 / 2?",
+    "options": {
+      "A": "9",
+      "B": "-1",
+      "C": "7",
+      "D": "17"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 9."
   },
   {
     "question_id": 4,
     "subject": "Math",
-    "topic": "Subtraction",
+    "topic": "Multiplication",
     "difficulty": 1,
-    "question_text": "What is 9 - 4?",
-    "options": { "A": "4", "B": "5", "C": "6", "D": "7" },
-    "correct_option": "B",
-    "explanation": "9 minus 4 leaves 5."
+    "question_text": "What is 2 * 1?",
+    "options": {
+      "A": "-5",
+      "B": "-6",
+      "C": "2",
+      "D": "-2"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 2."
   },
   {
     "question_id": 5,
     "subject": "Math",
-    "topic": "Addition",
+    "topic": "Multiplication",
     "difficulty": 1,
-    "question_text": "What is 3 + 4?",
-    "options": { "A": "6", "B": "7", "C": "8", "D": "9" },
-    "correct_option": "B",
-    "explanation": "3 plus 4 equals 7."
+    "question_text": "What is 4 * 2?",
+    "options": {
+      "A": "15",
+      "B": "-1",
+      "C": "12",
+      "D": "8"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 8."
   },
   {
     "question_id": 6,
     "subject": "Math",
-    "topic": "Addition",
-    "difficulty": 2,
-    "question_text": "What is 12 + 5?",
-    "options": { "A": "15", "B": "16", "C": "17", "D": "18" },
-    "correct_option": "C",
-    "explanation": "12 plus 5 equals 17."
+    "topic": "Multiplication",
+    "difficulty": 1,
+    "question_text": "What is 5 * 4?",
+    "options": {
+      "A": "28",
+      "B": "21",
+      "C": "16",
+      "D": "20"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 20."
   },
   {
     "question_id": 7,
     "subject": "Math",
-    "topic": "Subtraction",
-    "difficulty": 2,
-    "question_text": "What is 15 - 7?",
-    "options": { "A": "6", "B": "7", "C": "8", "D": "9" },
-    "correct_option": "C",
-    "explanation": "15 minus 7 equals 8."
+    "topic": "Multiplication",
+    "difficulty": 1,
+    "question_text": "What is 0 * 1?",
+    "options": {
+      "A": "0",
+      "B": "-7",
+      "C": "2",
+      "D": "-2"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 0."
   },
   {
     "question_id": 8,
     "subject": "Math",
-    "topic": "Addition",
-    "difficulty": 2,
-    "question_text": "What is 18 + 6?",
-    "options": { "A": "22", "B": "23", "C": "24", "D": "25" },
-    "correct_option": "C",
-    "explanation": "18 plus 6 equals 24."
+    "topic": "Subtraction",
+    "difficulty": 1,
+    "question_text": "What is 6 - 6?",
+    "options": {
+      "A": "10",
+      "B": "-2",
+      "C": "-4",
+      "D": "0"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 0."
   },
   {
     "question_id": 9,
     "subject": "Math",
     "topic": "Subtraction",
-    "difficulty": 2,
-    "question_text": "What is 20 - 9?",
-    "options": { "A": "9", "B": "10", "C": "11", "D": "12" },
-    "correct_option": "B",
-    "explanation": "20 minus 9 equals 11."
+    "difficulty": 1,
+    "question_text": "What is 8 - 3?",
+    "options": {
+      "A": "5",
+      "B": "3",
+      "C": "15",
+      "D": "7"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 5."
   },
   {
     "question_id": 10,
     "subject": "Math",
     "topic": "Addition",
-    "difficulty": 2,
-    "question_text": "What is 14 + 9?",
-    "options": { "A": "22", "B": "23", "C": "24", "D": "25" },
-    "correct_option": "B",
-    "explanation": "14 plus 9 equals 23."
+    "difficulty": 1,
+    "question_text": "What is 4 + 1?",
+    "options": {
+      "A": "5",
+      "B": "3",
+      "C": "7",
+      "D": "-3"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 5."
   },
   {
     "question_id": 11,
     "subject": "Math",
-    "topic": "Addition",
-    "difficulty": 3,
-    "question_text": "What is 125 + 87?",
-    "options": { "A": "202", "B": "211", "C": "212", "D": "213" },
+    "topic": "Subtraction",
+    "difficulty": 1,
+    "question_text": "What is 8 - 7?",
+    "options": {
+      "A": "11",
+      "B": "5",
+      "C": "1",
+      "D": "-5"
+    },
     "correct_option": "C",
-    "explanation": "125 plus 87 equals 212, check place value: 5+7, 2+8, 1."
+    "explanation": "The correct answer is 1."
   },
   {
     "question_id": 12,
     "subject": "Math",
-    "topic": "Subtraction",
-    "difficulty": 3,
-    "question_text": "What is 340 - 128?",
-    "options": { "A": "202", "B": "212", "C": "222", "D": "232" },
-    "correct_option": "B",
-    "explanation": "340 minus 128 equals 212 by borrowing."
+    "topic": "Multiplication",
+    "difficulty": 1,
+    "question_text": "What is 5 * 4?",
+    "options": {
+      "A": "28",
+      "B": "23",
+      "C": "20",
+      "D": "22"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 20."
   },
   {
     "question_id": 13,
     "subject": "Math",
-    "topic": "Addition",
-    "difficulty": 3,
-    "question_text": "What is 267 + 145?",
-    "options": { "A": "402", "B": "412", "C": "422", "D": "432" },
-    "correct_option": "B",
-    "explanation": "267 plus 145 equals 412."
+    "topic": "Division",
+    "difficulty": 1,
+    "question_text": "What is 2 / 1?",
+    "options": {
+      "A": "2",
+      "B": "12",
+      "C": "-4",
+      "D": "-5"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 2."
   },
   {
     "question_id": 14,
     "subject": "Math",
-    "topic": "Subtraction",
-    "difficulty": 3,
-    "question_text": "What is 580 - 267?",
-    "options": { "A": "303", "B": "313", "C": "323", "D": "333" },
+    "topic": "Addition",
+    "difficulty": 1,
+    "question_text": "What is 7 + 7?",
+    "options": {
+      "A": "23",
+      "B": "14",
+      "C": "20",
+      "D": "18"
+    },
     "correct_option": "B",
-    "explanation": "580 minus 267 equals 313."
+    "explanation": "The correct answer is 14."
   },
   {
     "question_id": 15,
     "subject": "Math",
     "topic": "Addition",
-    "difficulty": 3,
-    "question_text": "What is 356 + 189?",
-    "options": { "A": "533", "B": "545", "C": "545", "D": "555" },
-    "correct_option": "B",
-    "explanation": "356 plus 189 equals 545."
+    "difficulty": 1,
+    "question_text": "What is 9 + 5?",
+    "options": {
+      "A": "24",
+      "B": "7",
+      "C": "14",
+      "D": "13"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 14."
   },
   {
     "question_id": 16,
     "subject": "Math",
     "topic": "Addition",
-    "difficulty": 4,
-    "question_text": "What is 1,245 + 3,678?",
-    "options": { "A": "4,883", "B": "4,893", "C": "4,923", "D": "4,933" },
-    "correct_option": "C",
-    "explanation": "1,245 plus 3,678 equals 4,923; add each column with carrying."
+    "difficulty": 1,
+    "question_text": "What is 5 + 9?",
+    "options": {
+      "A": "7",
+      "B": "14",
+      "C": "20",
+      "D": "9"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 14."
   },
   {
     "question_id": 17,
     "subject": "Math",
     "topic": "Subtraction",
-    "difficulty": 4,
-    "question_text": "What is 9,002 - 4,389?",
-    "options": { "A": "4,513", "B": "4,603", "C": "4,613", "D": "4,703" },
-    "correct_option": "C",
-    "explanation": "Borrowing across zeros leaves 4,613."
+    "difficulty": 1,
+    "question_text": "What is 6 - 3?",
+    "options": {
+      "A": "10",
+      "B": "3",
+      "C": "-7",
+      "D": "9"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 3."
   },
   {
     "question_id": 18,
     "subject": "Math",
     "topic": "Addition",
-    "difficulty": 4,
-    "question_text": "What is 7,456 + 2,789?",
-    "options": { "A": "10,145", "B": "10,245", "C": "10,255", "D": "10,345" },
-    "correct_option": "B",
-    "explanation": "Add thousands, hundreds, tens, and ones to get 10,245."
+    "difficulty": 1,
+    "question_text": "What is 6 + 5?",
+    "options": {
+      "A": "8",
+      "B": "19",
+      "C": "2",
+      "D": "11"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 11."
   },
   {
     "question_id": 19,
     "subject": "Math",
-    "topic": "Subtraction",
-    "difficulty": 4,
-    "question_text": "What is 12,304 - 6,789?",
-    "options": { "A": "5,505", "B": "5,515", "C": "5,525", "D": "5,535" },
-    "correct_option": "B",
-    "explanation": "12,304 minus 6,789 equals 5,515."
+    "topic": "Addition",
+    "difficulty": 1,
+    "question_text": "What is 9 + 3?",
+    "options": {
+      "A": "12",
+      "B": "17",
+      "C": "19",
+      "D": "6"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 12."
   },
   {
     "question_id": 20,
     "subject": "Math",
     "topic": "Subtraction",
-    "difficulty": 4,
-    "question_text": "What is 8,120 - 2,987?",
-    "options": { "A": "5,123", "B": "5,133", "C": "5,143", "D": "5,153" },
-    "correct_option": "B",
-    "explanation": "8,120 minus 2,987 equals 5,133."
+    "difficulty": 1,
+    "question_text": "What is 9 - 4?",
+    "options": {
+      "A": "5",
+      "B": "4",
+      "C": "7",
+      "D": "15"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 5."
   },
   {
     "question_id": 21,
     "subject": "Math",
     "topic": "Addition",
-    "difficulty": 5,
-    "question_text": "What is 23,457 + 56,789?",
-    "options": { "A": "80,146", "B": "80,236", "C": "80,246", "D": "80,256" },
-    "correct_option": "C",
-    "explanation": "Summing each place yields 80,246."
+    "difficulty": 1,
+    "question_text": "What is 4 + 4?",
+    "options": {
+      "A": "-2",
+      "B": "8",
+      "C": "16",
+      "D": "0"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 8."
   },
   {
     "question_id": 22,
     "subject": "Math",
-    "topic": "Subtraction",
-    "difficulty": 5,
-    "question_text": "What is 90,005 - 47,869?",
-    "options": { "A": "42,036", "B": "42,126", "C": "42,136", "D": "42,146" },
+    "topic": "Addition",
+    "difficulty": 1,
+    "question_text": "What is 2 + 1?",
+    "options": {
+      "A": "-5",
+      "B": "-6",
+      "C": "3",
+      "D": "0"
+    },
     "correct_option": "C",
-    "explanation": "Borrow carefully to get 42,136."
+    "explanation": "The correct answer is 3."
   },
   {
     "question_id": 23,
     "subject": "Math",
-    "topic": "Addition",
-    "difficulty": 5,
-    "question_text": "What is 345,678 + 123,456?",
-    "options": { "A": "468,134", "B": "468,234", "C": "469,134", "D": "469,234" },
+    "topic": "Multiplication",
+    "difficulty": 1,
+    "question_text": "What is 5 * 3?",
+    "options": {
+      "A": "11",
+      "B": "9",
+      "C": "15",
+      "D": "22"
+    },
     "correct_option": "C",
-    "explanation": "Add hundreds of thousands through ones to reach 469,134."
+    "explanation": "The correct answer is 15."
   },
   {
     "question_id": 24,
     "subject": "Math",
-    "topic": "Subtraction",
-    "difficulty": 5,
-    "question_text": "What is 503,210 - 287,654?",
-    "options": { "A": "215,446", "B": "215,556", "C": "215,566", "D": "215,576" },
-    "correct_option": "B",
-    "explanation": "Subtract each place with regrouping: 503,210 - 287,654 = 215,556."
+    "topic": "Division",
+    "difficulty": 1,
+    "question_text": "What is 6 / 2?",
+    "options": {
+      "A": "3",
+      "B": "6",
+      "C": "-4",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 3."
   },
   {
     "question_id": 25,
     "subject": "Math",
     "topic": "Addition",
-    "difficulty": 5,
-    "question_text": "What is 789,321 + 654,987?",
-    "options": { "A": "1,434,108", "B": "1,444,108", "C": "1,444,308", "D": "1,444,908" },
+    "difficulty": 1,
+    "question_text": "What is 2 + 1?",
+    "options": {
+      "A": "5",
+      "B": "0",
+      "C": "3",
+      "D": "-4"
+    },
     "correct_option": "C",
-    "explanation": "789,321 plus 654,987 equals 1,444,308."
+    "explanation": "The correct answer is 3."
+  },
+  {
+    "question_id": 26,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 1,
+    "question_text": "What is 7 - 3?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "8",
+      "D": "4"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 4."
+  },
+  {
+    "question_id": 27,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 1,
+    "question_text": "What is 9 + 1?",
+    "options": {
+      "A": "10",
+      "B": "5",
+      "C": "2",
+      "D": "7"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 10."
+  },
+  {
+    "question_id": 28,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 1,
+    "question_text": "What is 7 - 1?",
+    "options": {
+      "A": "6",
+      "B": "1",
+      "C": "8",
+      "D": "-4"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 6."
+  },
+  {
+    "question_id": 29,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 1,
+    "question_text": "What is 3 * 5?",
+    "options": {
+      "A": "20",
+      "B": "15",
+      "C": "22",
+      "D": "9"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 15."
+  },
+  {
+    "question_id": 30,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 1,
+    "question_text": "What is 10 + 9?",
+    "options": {
+      "A": "10",
+      "B": "24",
+      "C": "19",
+      "D": "27"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 19."
+  },
+  {
+    "question_id": 31,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 1,
+    "question_text": "What is 10 - 2?",
+    "options": {
+      "A": "0",
+      "B": "5",
+      "C": "10",
+      "D": "8"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 8."
+  },
+  {
+    "question_id": 32,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 1,
+    "question_text": "What is 10 + 2?",
+    "options": {
+      "A": "18",
+      "B": "12",
+      "C": "20",
+      "D": "15"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 12."
+  },
+  {
+    "question_id": 33,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 1,
+    "question_text": "What is 1 * 2?",
+    "options": {
+      "A": "2",
+      "B": "-4",
+      "C": "12",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 2."
+  },
+  {
+    "question_id": 34,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 1,
+    "question_text": "What is 1 + 8?",
+    "options": {
+      "A": "17",
+      "B": "2",
+      "C": "18",
+      "D": "9"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 9."
+  },
+  {
+    "question_id": 35,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 1,
+    "question_text": "What is 1 * 2?",
+    "options": {
+      "A": "-1",
+      "B": "-6",
+      "C": "2",
+      "D": "3"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 2."
+  },
+  {
+    "question_id": 36,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 1,
+    "question_text": "What is 4 * 5?",
+    "options": {
+      "A": "27",
+      "B": "20",
+      "C": "10",
+      "D": "26"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 20."
+  },
+  {
+    "question_id": 37,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 1,
+    "question_text": "What is 5 - 2?",
+    "options": {
+      "A": "10",
+      "B": "3",
+      "C": "-4",
+      "D": "-3"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 3."
+  },
+  {
+    "question_id": 38,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 1,
+    "question_text": "What is 1 * 5?",
+    "options": {
+      "A": "3",
+      "B": "5",
+      "C": "15",
+      "D": "11"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 5."
+  },
+  {
+    "question_id": 39,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 1,
+    "question_text": "What is 7 + 5?",
+    "options": {
+      "A": "3",
+      "B": "6",
+      "C": "12",
+      "D": "2"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 12."
+  },
+  {
+    "question_id": 40,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 1,
+    "question_text": "What is 10 / 5?",
+    "options": {
+      "A": "-5",
+      "B": "-4",
+      "C": "-6",
+      "D": "2"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 2."
+  },
+  {
+    "question_id": 41,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 2,
+    "question_text": "What is 18 / 9?",
+    "options": {
+      "A": "3",
+      "B": "-7",
+      "C": "2",
+      "D": "1"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 2."
+  },
+  {
+    "question_id": 42,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 2,
+    "question_text": "What is 32 + 45?",
+    "options": {
+      "A": "80",
+      "B": "71",
+      "C": "77",
+      "D": "86"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 77."
+  },
+  {
+    "question_id": 43,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 2,
+    "question_text": "What is 20 / 5?",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "1",
+      "D": "7"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 4."
+  },
+  {
+    "question_id": 44,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 2,
+    "question_text": "What is 54 / 6?",
+    "options": {
+      "A": "6",
+      "B": "9",
+      "C": "13",
+      "D": "5"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 9."
+  },
+  {
+    "question_id": 45,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 2,
+    "question_text": "What is 22 - 11?",
+    "options": {
+      "A": "11",
+      "B": "9",
+      "C": "3",
+      "D": "13"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 11."
+  },
+  {
+    "question_id": 46,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 2,
+    "question_text": "What is 5 * 8?",
+    "options": {
+      "A": "48",
+      "B": "38",
+      "C": "40",
+      "D": "35"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 40."
+  },
+  {
+    "question_id": 47,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 2,
+    "question_text": "What is 112 / 16?",
+    "options": {
+      "A": "10",
+      "B": "13",
+      "C": "16",
+      "D": "7"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 7."
+  },
+  {
+    "question_id": 48,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 2,
+    "question_text": "What is 6 * 18?",
+    "options": {
+      "A": "108",
+      "B": "98",
+      "C": "114",
+      "D": "115"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 108."
+  },
+  {
+    "question_id": 49,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 2,
+    "question_text": "What is 31 + 49?",
+    "options": {
+      "A": "80",
+      "B": "73",
+      "C": "86",
+      "D": "79"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 80."
+  },
+  {
+    "question_id": 50,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 2,
+    "question_text": "What is 17 * 14?",
+    "options": {
+      "A": "238",
+      "B": "232",
+      "C": "234",
+      "D": "245"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 238."
+  },
+  {
+    "question_id": 51,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 2,
+    "question_text": "What is 49 - 46?",
+    "options": {
+      "A": "10",
+      "B": "2",
+      "C": "5",
+      "D": "3"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 3."
+  },
+  {
+    "question_id": 52,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 2,
+    "question_text": "What is 47 - 37?",
+    "options": {
+      "A": "20",
+      "B": "10",
+      "C": "19",
+      "D": "14"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 10."
+  },
+  {
+    "question_id": 53,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 2,
+    "question_text": "What is 120 / 10?",
+    "options": {
+      "A": "4",
+      "B": "18",
+      "C": "12",
+      "D": "11"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 12."
+  },
+  {
+    "question_id": 54,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 2,
+    "question_text": "What is 12 * 11?",
+    "options": {
+      "A": "122",
+      "B": "132",
+      "C": "123",
+      "D": "126"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 132."
+  },
+  {
+    "question_id": 55,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 2,
+    "question_text": "What is 216 / 18?",
+    "options": {
+      "A": "14",
+      "B": "12",
+      "C": "20",
+      "D": "8"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 12."
+  },
+  {
+    "question_id": 56,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 2,
+    "question_text": "What is 16 - 10?",
+    "options": {
+      "A": "9",
+      "B": "3",
+      "C": "6",
+      "D": "1"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 6."
+  },
+  {
+    "question_id": 57,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 2,
+    "question_text": "What is 39 + 18?",
+    "options": {
+      "A": "57",
+      "B": "64",
+      "C": "61",
+      "D": "63"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 57."
+  },
+  {
+    "question_id": 58,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 2,
+    "question_text": "What is 90 / 10?",
+    "options": {
+      "A": "9",
+      "B": "13",
+      "C": "7",
+      "D": "6"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 9."
+  },
+  {
+    "question_id": 59,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 2,
+    "question_text": "What is 38 - 27?",
+    "options": {
+      "A": "11",
+      "B": "10",
+      "C": "3",
+      "D": "8"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 11."
+  },
+  {
+    "question_id": 60,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 2,
+    "question_text": "What is 18 + 19?",
+    "options": {
+      "A": "31",
+      "B": "34",
+      "C": "37",
+      "D": "39"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 37."
+  },
+  {
+    "question_id": 61,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 2,
+    "question_text": "What is 150 / 15?",
+    "options": {
+      "A": "10",
+      "B": "14",
+      "C": "1",
+      "D": "13"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 10."
+  },
+  {
+    "question_id": 62,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 2,
+    "question_text": "What is 46 + 34?",
+    "options": {
+      "A": "80",
+      "B": "70",
+      "C": "81",
+      "D": "85"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 80."
+  },
+  {
+    "question_id": 63,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 2,
+    "question_text": "What is 41 - 24?",
+    "options": {
+      "A": "15",
+      "B": "22",
+      "C": "20",
+      "D": "17"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 17."
+  },
+  {
+    "question_id": 64,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 2,
+    "question_text": "What is 90 / 10?",
+    "options": {
+      "A": "3",
+      "B": "16",
+      "C": "18",
+      "D": "9"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 9."
+  },
+  {
+    "question_id": 65,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 2,
+    "question_text": "What is 37 + 18?",
+    "options": {
+      "A": "55",
+      "B": "46",
+      "C": "50",
+      "D": "59"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 55."
+  },
+  {
+    "question_id": 66,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 2,
+    "question_text": "What is 39 - 30?",
+    "options": {
+      "A": "7",
+      "B": "11",
+      "C": "9",
+      "D": "12"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 9."
+  },
+  {
+    "question_id": 67,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 2,
+    "question_text": "What is 44 + 13?",
+    "options": {
+      "A": "58",
+      "B": "54",
+      "C": "67",
+      "D": "57"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 57."
+  },
+  {
+    "question_id": 68,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 2,
+    "question_text": "What is 25 + 22?",
+    "options": {
+      "A": "41",
+      "B": "37",
+      "C": "47",
+      "D": "56"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 47."
+  },
+  {
+    "question_id": 69,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 2,
+    "question_text": "What is 46 + 23?",
+    "options": {
+      "A": "67",
+      "B": "69",
+      "C": "73",
+      "D": "70"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 69."
+  },
+  {
+    "question_id": 70,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 2,
+    "question_text": "What is 29 - 16?",
+    "options": {
+      "A": "3",
+      "B": "13",
+      "C": "21",
+      "D": "12"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 13."
+  },
+  {
+    "question_id": 71,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 2,
+    "question_text": "What is 47 + 50?",
+    "options": {
+      "A": "90",
+      "B": "96",
+      "C": "94",
+      "D": "97"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 97."
+  },
+  {
+    "question_id": 72,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 2,
+    "question_text": "What is 22 * 18?",
+    "options": {
+      "A": "402",
+      "B": "388",
+      "C": "396",
+      "D": "397"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 396."
+  },
+  {
+    "question_id": 73,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 2,
+    "question_text": "What is 64 / 8?",
+    "options": {
+      "A": "18",
+      "B": "8",
+      "C": "12",
+      "D": "9"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 8."
+  },
+  {
+    "question_id": 74,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 2,
+    "question_text": "What is 24 * 22?",
+    "options": {
+      "A": "533",
+      "B": "528",
+      "C": "531",
+      "D": "532"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 528."
+  },
+  {
+    "question_id": 75,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 2,
+    "question_text": "What is 27 + 38?",
+    "options": {
+      "A": "69",
+      "B": "65",
+      "C": "73",
+      "D": "62"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 65."
+  },
+  {
+    "question_id": 76,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 2,
+    "question_text": "What is 60 / 15?",
+    "options": {
+      "A": "4",
+      "B": "9",
+      "C": "5",
+      "D": "0"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 4."
+  },
+  {
+    "question_id": 77,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 2,
+    "question_text": "What is 22 * 5?",
+    "options": {
+      "A": "110",
+      "B": "116",
+      "C": "106",
+      "D": "102"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 110."
+  },
+  {
+    "question_id": 78,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 2,
+    "question_text": "What is 110 / 22?",
+    "options": {
+      "A": "9",
+      "B": "15",
+      "C": "10",
+      "D": "5"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 5."
+  },
+  {
+    "question_id": 79,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 2,
+    "question_text": "What is 35 - 25?",
+    "options": {
+      "A": "10",
+      "B": "18",
+      "C": "11",
+      "D": "9"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 10."
+  },
+  {
+    "question_id": 80,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 2,
+    "question_text": "What is 154 / 22?",
+    "options": {
+      "A": "5",
+      "B": "7",
+      "C": "8",
+      "D": "11"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 7."
+  },
+  {
+    "question_id": 81,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 3,
+    "question_text": "What is 99 + 130?",
+    "options": {
+      "A": "224",
+      "B": "236",
+      "C": "229",
+      "D": "222"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 229."
+  },
+  {
+    "question_id": 82,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 3,
+    "question_text": "What is 100 * 92?",
+    "options": {
+      "A": "9193",
+      "B": "9200",
+      "C": "9199",
+      "D": "9209"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 9200."
+  },
+  {
+    "question_id": 83,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 3,
+    "question_text": "What is 47 * 63?",
+    "options": {
+      "A": "2955",
+      "B": "2968",
+      "C": "2961",
+      "D": "2951"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 2961."
+  },
+  {
+    "question_id": 84,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 3,
+    "question_text": "What is 41 * 87?",
+    "options": {
+      "A": "3567",
+      "B": "3557",
+      "C": "3575",
+      "D": "3560"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 3567."
+  },
+  {
+    "question_id": 85,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 3,
+    "question_text": "What is 272 / 68?",
+    "options": {
+      "A": "2",
+      "B": "9",
+      "C": "-5",
+      "D": "4"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 4."
+  },
+  {
+    "question_id": 86,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 3,
+    "question_text": "What is 374 / 34?",
+    "options": {
+      "A": "11",
+      "B": "2",
+      "C": "5",
+      "D": "21"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 11."
+  },
+  {
+    "question_id": 87,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 3,
+    "question_text": "What is 113 + 80?",
+    "options": {
+      "A": "193",
+      "B": "200",
+      "C": "196",
+      "D": "202"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 193."
+  },
+  {
+    "question_id": 88,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 3,
+    "question_text": "What is 486 / 81?",
+    "options": {
+      "A": "14",
+      "B": "5",
+      "C": "9",
+      "D": "6"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 6."
+  },
+  {
+    "question_id": 89,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 3,
+    "question_text": "What is 117 - 104?",
+    "options": {
+      "A": "10",
+      "B": "13",
+      "C": "8",
+      "D": "5"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 13."
+  },
+  {
+    "question_id": 90,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 3,
+    "question_text": "What is 154 - 50?",
+    "options": {
+      "A": "113",
+      "B": "109",
+      "C": "104",
+      "D": "108"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 104."
+  },
+  {
+    "question_id": 91,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 3,
+    "question_text": "What is 61 * 83?",
+    "options": {
+      "A": "5060",
+      "B": "5063",
+      "C": "5061",
+      "D": "5055"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 5063."
+  },
+  {
+    "question_id": 92,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 3,
+    "question_text": "What is 118 - 88?",
+    "options": {
+      "A": "30",
+      "B": "24",
+      "C": "21",
+      "D": "22"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 30."
+  },
+  {
+    "question_id": 93,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 3,
+    "question_text": "What is 360 / 40?",
+    "options": {
+      "A": "8",
+      "B": "9",
+      "C": "11",
+      "D": "7"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 9."
+  },
+  {
+    "question_id": 94,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 3,
+    "question_text": "What is 160 + 132?",
+    "options": {
+      "A": "301",
+      "B": "290",
+      "C": "282",
+      "D": "292"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 292."
+  },
+  {
+    "question_id": 95,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 3,
+    "question_text": "What is 98 * 30?",
+    "options": {
+      "A": "2945",
+      "B": "2940",
+      "C": "2935",
+      "D": "2946"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 2940."
+  },
+  {
+    "question_id": 96,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 3,
+    "question_text": "What is 261 / 87?",
+    "options": {
+      "A": "8",
+      "B": "3",
+      "C": "4",
+      "D": "6"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 3."
+  },
+  {
+    "question_id": 97,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 3,
+    "question_text": "What is 155 - 134?",
+    "options": {
+      "A": "26",
+      "B": "20",
+      "C": "23",
+      "D": "21"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 21."
+  },
+  {
+    "question_id": 98,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 3,
+    "question_text": "What is 57 * 66?",
+    "options": {
+      "A": "3768",
+      "B": "3755",
+      "C": "3764",
+      "D": "3762"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 3762."
+  },
+  {
+    "question_id": 99,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 3,
+    "question_text": "What is 155 / 31?",
+    "options": {
+      "A": "5",
+      "B": "6",
+      "C": "11",
+      "D": "14"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 5."
+  },
+  {
+    "question_id": 100,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 3,
+    "question_text": "What is 102 + 118?",
+    "options": {
+      "A": "220",
+      "B": "214",
+      "C": "219",
+      "D": "227"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 220."
+  },
+  {
+    "question_id": 101,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 3,
+    "question_text": "What is 57 + 111?",
+    "options": {
+      "A": "175",
+      "B": "163",
+      "C": "167",
+      "D": "168"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 168."
+  },
+  {
+    "question_id": 102,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 3,
+    "question_text": "What is 107 + 79?",
+    "options": {
+      "A": "186",
+      "B": "196",
+      "C": "190",
+      "D": "179"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 186."
+  },
+  {
+    "question_id": 103,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 3,
+    "question_text": "What is 78 * 86?",
+    "options": {
+      "A": "6712",
+      "B": "6708",
+      "C": "6713",
+      "D": "6705"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 6708."
+  },
+  {
+    "question_id": 104,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 3,
+    "question_text": "What is 120 - 67?",
+    "options": {
+      "A": "51",
+      "B": "59",
+      "C": "56",
+      "D": "53"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 53."
+  },
+  {
+    "question_id": 105,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 3,
+    "question_text": "What is 396 / 44?",
+    "options": {
+      "A": "9",
+      "B": "10",
+      "C": "16",
+      "D": "14"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 9."
+  },
+  {
+    "question_id": 106,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 3,
+    "question_text": "What is 330 / 66?",
+    "options": {
+      "A": "7",
+      "B": "5",
+      "C": "2",
+      "D": "13"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 5."
+  },
+  {
+    "question_id": 107,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 3,
+    "question_text": "What is 85 * 73?",
+    "options": {
+      "A": "6199",
+      "B": "6207",
+      "C": "6205",
+      "D": "6215"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 6205."
+  },
+  {
+    "question_id": 108,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 3,
+    "question_text": "What is 37 * 81?",
+    "options": {
+      "A": "2990",
+      "B": "3003",
+      "C": "3001",
+      "D": "2997"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 2997."
+  },
+  {
+    "question_id": 109,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 3,
+    "question_text": "What is 132 / 44?",
+    "options": {
+      "A": "12",
+      "B": "3",
+      "C": "8",
+      "D": "1"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 3."
+  },
+  {
+    "question_id": 110,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 3,
+    "question_text": "What is 93 * 73?",
+    "options": {
+      "A": "6799",
+      "B": "6796",
+      "C": "6794",
+      "D": "6789"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 6789."
+  },
+  {
+    "question_id": 111,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 3,
+    "question_text": "What is 123 - 108?",
+    "options": {
+      "A": "8",
+      "B": "18",
+      "C": "7",
+      "D": "15"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 15."
+  },
+  {
+    "question_id": 112,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 3,
+    "question_text": "What is 28 * 30?",
+    "options": {
+      "A": "831",
+      "B": "840",
+      "C": "841",
+      "D": "839"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 840."
+  },
+  {
+    "question_id": 113,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 3,
+    "question_text": "What is 185 - 155?",
+    "options": {
+      "A": "38",
+      "B": "30",
+      "C": "22",
+      "D": "25"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 30."
+  },
+  {
+    "question_id": 114,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 3,
+    "question_text": "What is 396 / 99?",
+    "options": {
+      "A": "4",
+      "B": "1",
+      "C": "14",
+      "D": "8"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 4."
+  },
+  {
+    "question_id": 115,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 3,
+    "question_text": "What is 169 + 123?",
+    "options": {
+      "A": "292",
+      "B": "287",
+      "C": "284",
+      "D": "299"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 292."
+  },
+  {
+    "question_id": 116,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 3,
+    "question_text": "What is 513 / 57?",
+    "options": {
+      "A": "11",
+      "B": "5",
+      "C": "9",
+      "D": "8"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 9."
+  },
+  {
+    "question_id": 117,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 3,
+    "question_text": "What is 686 / 98?",
+    "options": {
+      "A": "6",
+      "B": "7",
+      "C": "15",
+      "D": "-3"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 7."
+  },
+  {
+    "question_id": 118,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 3,
+    "question_text": "What is 177 + 123?",
+    "options": {
+      "A": "301",
+      "B": "300",
+      "C": "297",
+      "D": "309"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 300."
+  },
+  {
+    "question_id": 119,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 3,
+    "question_text": "What is 42 * 37?",
+    "options": {
+      "A": "1553",
+      "B": "1564",
+      "C": "1554",
+      "D": "1545"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 1554."
+  },
+  {
+    "question_id": 120,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 3,
+    "question_text": "What is 125 - 73?",
+    "options": {
+      "A": "52",
+      "B": "47",
+      "C": "48",
+      "D": "55"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 52."
+  },
+  {
+    "question_id": 121,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 4,
+    "question_text": "What is 184 * 231?",
+    "options": {
+      "A": "42497",
+      "B": "42509",
+      "C": "42504",
+      "D": "42503"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 42504."
+  },
+  {
+    "question_id": 122,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 4,
+    "question_text": "What is 941 - 892?",
+    "options": {
+      "A": "51",
+      "B": "56",
+      "C": "50",
+      "D": "49"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 49."
+  },
+  {
+    "question_id": 123,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 4,
+    "question_text": "What is 374 * 163?",
+    "options": {
+      "A": "60962",
+      "B": "60963",
+      "C": "60966",
+      "D": "60960"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 60962."
+  },
+  {
+    "question_id": 124,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 4,
+    "question_text": "What is 891 + 439?",
+    "options": {
+      "A": "1339",
+      "B": "1330",
+      "C": "1320",
+      "D": "1335"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 1330."
+  },
+  {
+    "question_id": 125,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 4,
+    "question_text": "What is 850 + 675?",
+    "options": {
+      "A": "1535",
+      "B": "1528",
+      "C": "1524",
+      "D": "1525"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 1525."
+  },
+  {
+    "question_id": 126,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 4,
+    "question_text": "What is 511 + 704?",
+    "options": {
+      "A": "1215",
+      "B": "1212",
+      "C": "1222",
+      "D": "1208"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 1215."
+  },
+  {
+    "question_id": 127,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 4,
+    "question_text": "What is 443 * 480?",
+    "options": {
+      "A": "212643",
+      "B": "212640",
+      "C": "212647",
+      "D": "212648"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 212640."
+  },
+  {
+    "question_id": 128,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 4,
+    "question_text": "What is 3320 / 415?",
+    "options": {
+      "A": "8",
+      "B": "6",
+      "C": "-1",
+      "D": "9"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 8."
+  },
+  {
+    "question_id": 129,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 4,
+    "question_text": "What is 571 - 301?",
+    "options": {
+      "A": "277",
+      "B": "271",
+      "C": "270",
+      "D": "280"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 270."
+  },
+  {
+    "question_id": 130,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 4,
+    "question_text": "What is 197 * 162?",
+    "options": {
+      "A": "31918",
+      "B": "31906",
+      "C": "31910",
+      "D": "31914"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 31914."
+  },
+  {
+    "question_id": 131,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 4,
+    "question_text": "What is 778 - 328?",
+    "options": {
+      "A": "457",
+      "B": "450",
+      "C": "446",
+      "D": "442"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 450."
+  },
+  {
+    "question_id": 132,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 4,
+    "question_text": "What is 992 - 536?",
+    "options": {
+      "A": "465",
+      "B": "446",
+      "C": "456",
+      "D": "450"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 456."
+  },
+  {
+    "question_id": 133,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 4,
+    "question_text": "What is 189 * 156?",
+    "options": {
+      "A": "29484",
+      "B": "29474",
+      "C": "29478",
+      "D": "29485"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 29484."
+  },
+  {
+    "question_id": 134,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 4,
+    "question_text": "What is 378 + 471?",
+    "options": {
+      "A": "843",
+      "B": "840",
+      "C": "852",
+      "D": "849"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 849."
+  },
+  {
+    "question_id": 135,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 4,
+    "question_text": "What is 2303 / 329?",
+    "options": {
+      "A": "15",
+      "B": "7",
+      "C": "0",
+      "D": "13"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 7."
+  },
+  {
+    "question_id": 136,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 4,
+    "question_text": "What is 944 + 874?",
+    "options": {
+      "A": "1824",
+      "B": "1822",
+      "C": "1817",
+      "D": "1818"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 1818."
+  },
+  {
+    "question_id": 137,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 4,
+    "question_text": "What is 3816 / 318?",
+    "options": {
+      "A": "16",
+      "B": "5",
+      "C": "17",
+      "D": "12"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 12."
+  },
+  {
+    "question_id": 138,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 4,
+    "question_text": "What is 329 - 267?",
+    "options": {
+      "A": "62",
+      "B": "60",
+      "C": "71",
+      "D": "72"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 62."
+  },
+  {
+    "question_id": 139,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 4,
+    "question_text": "What is 3938 / 358?",
+    "options": {
+      "A": "11",
+      "B": "21",
+      "C": "14",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 11."
+  },
+  {
+    "question_id": 140,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 4,
+    "question_text": "What is 623 - 547?",
+    "options": {
+      "A": "80",
+      "B": "79",
+      "C": "78",
+      "D": "76"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 76."
+  },
+  {
+    "question_id": 141,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 4,
+    "question_text": "What is 440 * 230?",
+    "options": {
+      "A": "101201",
+      "B": "101194",
+      "C": "101205",
+      "D": "101200"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 101200."
+  },
+  {
+    "question_id": 142,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 4,
+    "question_text": "What is 642 + 298?",
+    "options": {
+      "A": "947",
+      "B": "941",
+      "C": "934",
+      "D": "940"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 940."
+  },
+  {
+    "question_id": 143,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 4,
+    "question_text": "What is 620 + 562?",
+    "options": {
+      "A": "1173",
+      "B": "1182",
+      "C": "1185",
+      "D": "1181"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 1182."
+  },
+  {
+    "question_id": 144,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 4,
+    "question_text": "What is 872 - 358?",
+    "options": {
+      "A": "514",
+      "B": "511",
+      "C": "507",
+      "D": "519"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 514."
+  },
+  {
+    "question_id": 145,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 4,
+    "question_text": "What is 980 + 485?",
+    "options": {
+      "A": "1462",
+      "B": "1473",
+      "C": "1468",
+      "D": "1465"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 1465."
+  },
+  {
+    "question_id": 146,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 4,
+    "question_text": "What is 384 + 479?",
+    "options": {
+      "A": "862",
+      "B": "853",
+      "C": "863",
+      "D": "864"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 863."
+  },
+  {
+    "question_id": 147,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 4,
+    "question_text": "What is 345 + 958?",
+    "options": {
+      "A": "1303",
+      "B": "1313",
+      "C": "1293",
+      "D": "1295"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 1303."
+  },
+  {
+    "question_id": 148,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 4,
+    "question_text": "What is 1096 / 274?",
+    "options": {
+      "A": "12",
+      "B": "5",
+      "C": "3",
+      "D": "4"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 4."
+  },
+  {
+    "question_id": 149,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 4,
+    "question_text": "What is 972 - 832?",
+    "options": {
+      "A": "140",
+      "B": "132",
+      "C": "138",
+      "D": "131"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 140."
+  },
+  {
+    "question_id": 150,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 4,
+    "question_text": "What is 3690 / 410?",
+    "options": {
+      "A": "7",
+      "B": "5",
+      "C": "12",
+      "D": "9"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 9."
+  },
+  {
+    "question_id": 151,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 4,
+    "question_text": "What is 490 + 894?",
+    "options": {
+      "A": "1392",
+      "B": "1390",
+      "C": "1384",
+      "D": "1389"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 1384."
+  },
+  {
+    "question_id": 152,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 4,
+    "question_text": "What is 812 / 406?",
+    "options": {
+      "A": "-8",
+      "B": "1",
+      "C": "2",
+      "D": "-2"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 2."
+  },
+  {
+    "question_id": 153,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 4,
+    "question_text": "What is 267 * 161?",
+    "options": {
+      "A": "42992",
+      "B": "42977",
+      "C": "42987",
+      "D": "42990"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 42987."
+  },
+  {
+    "question_id": 154,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 4,
+    "question_text": "What is 772 - 712?",
+    "options": {
+      "A": "61",
+      "B": "62",
+      "C": "52",
+      "D": "60"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 60."
+  },
+  {
+    "question_id": 155,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 4,
+    "question_text": "What is 973 / 139?",
+    "options": {
+      "A": "9",
+      "B": "7",
+      "C": "15",
+      "D": "10"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 7."
+  },
+  {
+    "question_id": 156,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 4,
+    "question_text": "What is 770 / 110?",
+    "options": {
+      "A": "11",
+      "B": "16",
+      "C": "7",
+      "D": "2"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 7."
+  },
+  {
+    "question_id": 157,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 4,
+    "question_text": "What is 449 + 646?",
+    "options": {
+      "A": "1101",
+      "B": "1097",
+      "C": "1103",
+      "D": "1095"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 1095."
+  },
+  {
+    "question_id": 158,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 4,
+    "question_text": "What is 213 * 270?",
+    "options": {
+      "A": "57502",
+      "B": "57516",
+      "C": "57505",
+      "D": "57510"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 57510."
+  },
+  {
+    "question_id": 159,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 4,
+    "question_text": "What is 279 * 472?",
+    "options": {
+      "A": "131682",
+      "B": "131698",
+      "C": "131685",
+      "D": "131688"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 131688."
+  },
+  {
+    "question_id": 160,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 4,
+    "question_text": "What is 816 - 377?",
+    "options": {
+      "A": "439",
+      "B": "449",
+      "C": "433",
+      "D": "431"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 439."
+  },
+  {
+    "question_id": 161,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 5,
+    "question_text": "What is 22495 / 2045?",
+    "options": {
+      "A": "11",
+      "B": "19",
+      "C": "15",
+      "D": "21"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 11."
+  },
+  {
+    "question_id": 162,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 5,
+    "question_text": "What is 2801 - 1279?",
+    "options": {
+      "A": "1527",
+      "B": "1522",
+      "C": "1532",
+      "D": "1526"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 1522."
+  },
+  {
+    "question_id": 163,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 5,
+    "question_text": "What is 1539 * 651?",
+    "options": {
+      "A": "1001880",
+      "B": "1001888",
+      "C": "1001893",
+      "D": "1001889"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 1001889."
+  },
+  {
+    "question_id": 164,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 5,
+    "question_text": "What is 3640 + 4539?",
+    "options": {
+      "A": "8188",
+      "B": "8179",
+      "C": "8171",
+      "D": "8185"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 8179."
+  },
+  {
+    "question_id": 165,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 5,
+    "question_text": "What is 25971 / 2361?",
+    "options": {
+      "A": "20",
+      "B": "11",
+      "C": "21",
+      "D": "7"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 11."
+  },
+  {
+    "question_id": 166,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 5,
+    "question_text": "What is 2845 + 1423?",
+    "options": {
+      "A": "4274",
+      "B": "4278",
+      "C": "4268",
+      "D": "4260"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 4268."
+  },
+  {
+    "question_id": 167,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 5,
+    "question_text": "What is 13990 / 1399?",
+    "options": {
+      "A": "10",
+      "B": "16",
+      "C": "19",
+      "D": "5"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 10."
+  },
+  {
+    "question_id": 168,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 5,
+    "question_text": "What is 9359 / 1337?",
+    "options": {
+      "A": "-2",
+      "B": "16",
+      "C": "7",
+      "D": "17"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 7."
+  },
+  {
+    "question_id": 169,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 5,
+    "question_text": "What is 3285 + 3778?",
+    "options": {
+      "A": "7062",
+      "B": "7063",
+      "C": "7061",
+      "D": "7065"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 7063."
+  },
+  {
+    "question_id": 170,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 5,
+    "question_text": "What is 4754 - 2432?",
+    "options": {
+      "A": "2321",
+      "B": "2322",
+      "C": "2324",
+      "D": "2332"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 2322."
+  },
+  {
+    "question_id": 171,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 5,
+    "question_text": "What is 1644 * 1271?",
+    "options": {
+      "A": "2089530",
+      "B": "2089534",
+      "C": "2089518",
+      "D": "2089524"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 2089524."
+  },
+  {
+    "question_id": 172,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 5,
+    "question_text": "What is 537 * 1242?",
+    "options": {
+      "A": "666953",
+      "B": "666954",
+      "C": "666949",
+      "D": "666950"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 666954."
+  },
+  {
+    "question_id": 173,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 5,
+    "question_text": "What is 1634 - 1563?",
+    "options": {
+      "A": "70",
+      "B": "63",
+      "C": "64",
+      "D": "71"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 71."
+  },
+  {
+    "question_id": 174,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 5,
+    "question_text": "What is 3446 - 2543?",
+    "options": {
+      "A": "903",
+      "B": "898",
+      "C": "897",
+      "D": "912"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 903."
+  },
+  {
+    "question_id": 175,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 5,
+    "question_text": "What is 2682 + 2492?",
+    "options": {
+      "A": "5174",
+      "B": "5183",
+      "C": "5171",
+      "D": "5178"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 5174."
+  },
+  {
+    "question_id": 176,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 5,
+    "question_text": "What is 3187 - 1979?",
+    "options": {
+      "A": "1208",
+      "B": "1204",
+      "C": "1207",
+      "D": "1213"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 1208."
+  },
+  {
+    "question_id": 177,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 5,
+    "question_text": "What is 12450 / 2075?",
+    "options": {
+      "A": "12",
+      "B": "9",
+      "C": "6",
+      "D": "8"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 6."
+  },
+  {
+    "question_id": 178,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 5,
+    "question_text": "What is 606 * 1813?",
+    "options": {
+      "A": "1098679",
+      "B": "1098685",
+      "C": "1098683",
+      "D": "1098678"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 1098678."
+  },
+  {
+    "question_id": 179,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 5,
+    "question_text": "What is 671 * 2062?",
+    "options": {
+      "A": "1383606",
+      "B": "1383602",
+      "C": "1383600",
+      "D": "1383597"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 1383602."
+  },
+  {
+    "question_id": 180,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 5,
+    "question_text": "What is 4345 - 2847?",
+    "options": {
+      "A": "1488",
+      "B": "1501",
+      "C": "1499",
+      "D": "1498"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 1498."
+  },
+  {
+    "question_id": 181,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 5,
+    "question_text": "What is 2581 - 1334?",
+    "options": {
+      "A": "1237",
+      "B": "1248",
+      "C": "1247",
+      "D": "1244"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 1247."
+  },
+  {
+    "question_id": 182,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 5,
+    "question_text": "What is 1563 - 1156?",
+    "options": {
+      "A": "412",
+      "B": "407",
+      "C": "401",
+      "D": "406"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 407."
+  },
+  {
+    "question_id": 183,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 5,
+    "question_text": "What is 1077 + 2048?",
+    "options": {
+      "A": "3121",
+      "B": "3119",
+      "C": "3125",
+      "D": "3132"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 3125."
+  },
+  {
+    "question_id": 184,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 5,
+    "question_text": "What is 2233 - 1499?",
+    "options": {
+      "A": "737",
+      "B": "731",
+      "C": "734",
+      "D": "725"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 734."
+  },
+  {
+    "question_id": 185,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 5,
+    "question_text": "What is 17220 / 1722?",
+    "options": {
+      "A": "16",
+      "B": "10",
+      "C": "0",
+      "D": "20"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 10."
+  },
+  {
+    "question_id": 186,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 5,
+    "question_text": "What is 1379 * 503?",
+    "options": {
+      "A": "693646",
+      "B": "693634",
+      "C": "693637",
+      "D": "693638"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 693637."
+  },
+  {
+    "question_id": 187,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 5,
+    "question_text": "What is 638 * 2452?",
+    "options": {
+      "A": "1564382",
+      "B": "1564376",
+      "C": "1564366",
+      "D": "1564383"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 1564376."
+  },
+  {
+    "question_id": 188,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 5,
+    "question_text": "What is 7584 / 1264?",
+    "options": {
+      "A": "-2",
+      "B": "-4",
+      "C": "6",
+      "D": "7"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 6."
+  },
+  {
+    "question_id": 189,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 5,
+    "question_text": "What is 773 * 590?",
+    "options": {
+      "A": "456070",
+      "B": "456077",
+      "C": "456080",
+      "D": "456071"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 456070."
+  },
+  {
+    "question_id": 190,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 5,
+    "question_text": "What is 7172 / 1793?",
+    "options": {
+      "A": "-2",
+      "B": "8",
+      "C": "-4",
+      "D": "4"
+    },
+    "correct_option": "D",
+    "explanation": "The correct answer is 4."
+  },
+  {
+    "question_id": 191,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 5,
+    "question_text": "What is 4240 + 1817?",
+    "options": {
+      "A": "6057",
+      "B": "6063",
+      "C": "6056",
+      "D": "6048"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 6057."
+  },
+  {
+    "question_id": 192,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 5,
+    "question_text": "What is 574 * 2042?",
+    "options": {
+      "A": "1172107",
+      "B": "1172118",
+      "C": "1172108",
+      "D": "1172104"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 1172108."
+  },
+  {
+    "question_id": 193,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 5,
+    "question_text": "What is 754 * 2137?",
+    "options": {
+      "A": "1611298",
+      "B": "1611300",
+      "C": "1611299",
+      "D": "1611301"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 1611298."
+  },
+  {
+    "question_id": 194,
+    "subject": "Math",
+    "topic": "Subtraction",
+    "difficulty": 5,
+    "question_text": "What is 3834 - 3032?",
+    "options": {
+      "A": "808",
+      "B": "803",
+      "C": "802",
+      "D": "807"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 802."
+  },
+  {
+    "question_id": 195,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 5,
+    "question_text": "What is 2763 + 3467?",
+    "options": {
+      "A": "6225",
+      "B": "6237",
+      "C": "6230",
+      "D": "6229"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 6230."
+  },
+  {
+    "question_id": 196,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 5,
+    "question_text": "What is 1853 * 1105?",
+    "options": {
+      "A": "2047569",
+      "B": "2047574",
+      "C": "2047565",
+      "D": "2047564"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 2047565."
+  },
+  {
+    "question_id": 197,
+    "subject": "Math",
+    "topic": "Multiplication",
+    "difficulty": 5,
+    "question_text": "What is 1415 * 586?",
+    "options": {
+      "A": "829191",
+      "B": "829190",
+      "C": "829199",
+      "D": "829193"
+    },
+    "correct_option": "B",
+    "explanation": "The correct answer is 829190."
+  },
+  {
+    "question_id": 198,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 5,
+    "question_text": "What is 3749 + 3611?",
+    "options": {
+      "A": "7366",
+      "B": "7362",
+      "C": "7360",
+      "D": "7361"
+    },
+    "correct_option": "C",
+    "explanation": "The correct answer is 7360."
+  },
+  {
+    "question_id": 199,
+    "subject": "Math",
+    "topic": "Division",
+    "difficulty": 5,
+    "question_text": "What is 2284 / 571?",
+    "options": {
+      "A": "4",
+      "B": "1",
+      "C": "-4",
+      "D": "14"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 4."
+  },
+  {
+    "question_id": 200,
+    "subject": "Math",
+    "topic": "Addition",
+    "difficulty": 5,
+    "question_text": "What is 3478 + 1628?",
+    "options": {
+      "A": "5106",
+      "B": "5110",
+      "C": "5107",
+      "D": "5098"
+    },
+    "correct_option": "A",
+    "explanation": "The correct answer is 5106."
   }
 ]

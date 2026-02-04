@@ -1,4 +1,4 @@
-from typing import Any, Dict, List, Optional, Set
+from typing import Any, Dict, List, Optional, Set, Tuple
 
 from db.database import get_conn
 
@@ -64,6 +64,27 @@ def get_random_question(subject: str, difficulty: int, exclude_ids: Set[int]) ->
             keys = [column[0] for column in cursor.description]
             return dict(zip(keys, row))
     return None
+
+
+def get_question_with_fallback(
+    subject: str, difficulty: int, exclude_ids: Set[int]
+) -> Tuple[Optional[Dict[str, Any]], Optional[int]]:
+    """
+    Try the requested difficulty first; if empty, search nearby difficulties.
+    Returns (question, actual_difficulty).
+    """
+    candidates = [difficulty]
+    for delta in range(1, 5):
+        if 1 <= difficulty + delta <= 5:
+            candidates.append(difficulty + delta)
+        if 1 <= difficulty - delta <= 5:
+            candidates.append(difficulty - delta)
+
+    for level in candidates:
+        question = get_random_question(subject, level, exclude_ids)
+        if question:
+            return question, level
+    return None, None
 
 
 def record_attempt(

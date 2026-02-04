@@ -1,12 +1,16 @@
 import tkinter as tk
-from tkinter import messagebox, ttk
+from tkinter import messagebox
+
+import ttkbootstrap as ttkb
 
 from services import user_service
+from ui.theme import SPACING_16, SPACING_24
+from ui.widgets import brand_panel, card, primary_button, secondary_button, section_title
 
 SEN_PROFILES = ["general", "dyslexia", "adhd", "autism", "other"]
 
 
-class RegisterView(tk.Frame):
+class RegisterView(ttkb.Frame):
     def __init__(self, parent: tk.Misc, controller) -> None:
         super().__init__(parent)
         self.controller = controller
@@ -15,40 +19,71 @@ class RegisterView(tk.Frame):
         self._build_widgets()
 
     def _build_widgets(self) -> None:
-        header = tk.Label(self, text="EduAI Register", font=("Arial", 18))
-        header.pack(pady=(30, 10))
+        self.columnconfigure(0, weight=1)
+        self.rowconfigure(0, weight=1)
 
-        form_wrapper = tk.Frame(self)
-        form_wrapper.pack(expand=True)
+        shell = ttkb.Frame(self, padding=(SPACING_24, SPACING_24), bootstyle="light")
+        shell.grid(row=0, column=0, sticky="nsew")
 
-        form = tk.Frame(form_wrapper, width=380)
-        form.pack(padx=20, pady=10)
-        form.pack_propagate(False)
+        layout = card(shell, bootstyle="light")
+        layout.place(relx=0.5, rely=0.5, anchor="center", relwidth=0.9, relheight=0.8)
+        layout.columnconfigure(0, weight=1)
+        layout.columnconfigure(1, weight=2)
+
+        hero = brand_panel(
+            layout,
+            title="EduAI",
+            tagline="Create your profile",
+            bullets=[
+                "Pick your support needs",
+                "Enable accessibility options",
+                "Get personalized practice",
+            ],
+        )
+        hero.grid(row=0, column=0, sticky="nsew")
+
+        body = ttkb.Frame(layout, padding=(SPACING_24, SPACING_24))
+        body.grid(row=0, column=1, sticky="nsew")
+        body.columnconfigure(0, weight=1)
+        body.rowconfigure(0, weight=1)
+        body.rowconfigure(2, weight=1)
+
+        inner = ttkb.Frame(body)
+        inner.grid(row=1, column=0)
+        inner.columnconfigure(1, weight=1)
+
+        header = section_title(inner, "Create account")
+        header.grid(row=0, column=0, columnspan=2, sticky="w", pady=(0, SPACING_16))
+
+        form = ttkb.Frame(inner)
+        form.grid(row=1, column=0, columnspan=2, sticky="ew")
         form.columnconfigure(1, weight=1)
 
-        tk.Label(form, text="Username:").grid(row=0, column=0, sticky="w", pady=5)
-        tk.Entry(form, textvariable=self.username_var, width=30).grid(
-            row=0, column=1, sticky="ew", pady=5
-        )
+        ttkb.Label(form, text="Username").grid(row=0, column=0, sticky="w", pady=6, padx=(0, 10))
+        self.username_entry = ttkb.Entry(form, textvariable=self.username_var, width=32)
+        self.username_entry.grid(row=0, column=1, sticky="ew", pady=6)
 
-        tk.Label(form, text="Support needs:").grid(row=1, column=0, sticky="w", pady=5)
-        self.profile_dropdown = ttk.Combobox(
+        ttkb.Label(form, text="Support needs").grid(row=1, column=0, sticky="w", pady=6, padx=(0, 10))
+        self.profile_dropdown = ttkb.Combobox(
             form, textvariable=self.sen_profile, values=SEN_PROFILES, state="readonly"
         )
-        self.profile_dropdown.grid(row=1, column=1, sticky="ew", pady=5)
+        self.profile_dropdown.grid(row=1, column=1, sticky="ew", pady=6)
         self.profile_dropdown.current(0)
 
-        action_btn = tk.Button(self, text="Create account", command=self.handle_register, width=20)
-        action_btn.pack(pady=(10, 10))
-
-        back_btn = tk.Button(
-            self, text="Back to login", command=lambda: self.controller.show_frame("LoginView")
+        actions = ttkb.Frame(inner)
+        actions.grid(row=2, column=0, columnspan=2, pady=(SPACING_16, 0))
+        self.create_button = primary_button(actions, "Create account", command=self.handle_register)
+        self.create_button.grid(row=0, column=0, padx=(0, 8))
+        self.back_button = secondary_button(
+            actions, "Back to login", command=lambda: self.controller.show_frame("LoginView")
         )
-        back_btn.pack()
+        self.back_button.grid(row=0, column=1)
 
     def on_show(self) -> None:
         self.username_var.set("")
         self.sen_profile.set(SEN_PROFILES[0])
+        if hasattr(self, "username_entry"):
+            self.username_entry.focus_set()
 
     def handle_register(self) -> None:
         username = self.username_var.get().strip()
