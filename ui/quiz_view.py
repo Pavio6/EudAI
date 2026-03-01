@@ -11,6 +11,8 @@ from ui.widgets import card, primary_button, secondary_button, section_title
 
 
 class QuizView(ttkb.Frame):
+    SUBJECTS = ("Math", "English")
+
     def __init__(self, parent: tk.Misc, controller) -> None:
         super().__init__(parent)
         self.controller = controller
@@ -102,9 +104,12 @@ class QuizView(ttkb.Frame):
             messagebox.showerror("Error", "Please sign in first.")
             self.controller.show_frame("LoginView")
             return
+        selected = getattr(self.controller, "selected_subject", "Math")
+        self.subject = selected if selected in self.SUBJECTS else "Math"
+        self.header_label.config(text=f"Subject: {self.subject}")
         if self.session_id:
             quiz_service.end_session(self.session_id)
-        self.session_id = quiz_service.start_session(user["user_id"])
+        self.session_id = quiz_service.start_session(user["user_id"], self.subject)
         self.seen_question_ids.clear()
         self.correct_streak = 0
         self.session_attempts = 0
@@ -112,7 +117,9 @@ class QuizView(ttkb.Frame):
         self.session_time_sum = 0
         self.session_tts_count = 0
         self.answer_locked = False
-        self.current_difficulty = progress_service.get_last_attempt_difficulty(user["user_id"])
+        self.current_difficulty = progress_service.get_last_attempt_difficulty(
+            user["user_id"], self.subject
+        )
         self._update_difficulty_ui()
         self.tip_label.config(text=user_service.get_profile_tip(user.get("sen_profile")))
         self.load_question()
@@ -284,6 +291,7 @@ class QuizView(ttkb.Frame):
             recommendation_service.add_recommendation(
                 user_id=user_id,
                 session_id=self.session_id,
+                subject=self.subject,
                 rec_type=rec_type,
                 message=message,
                 metadata_json=metadata,

@@ -24,6 +24,8 @@ class App(ttkb.Window):
         self.geometry(f"{target_w}x{target_h}")
         self.current_user: Optional[Dict[str, object]] = None
         self.current_user_id: Optional[int] = None
+        self.selected_subject: str = "Math"
+        self.dashboard_subject_filter: str = "All"
         self.high_contrast_active = False
 
         container = ttkb.Frame(self)

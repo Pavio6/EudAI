@@ -1,0 +1,20 @@
+digraph FLOW {
+  rankdir=TB;
+  graph [bgcolor="white", pad="0.2", nodesep="0.45", ranksep="0.55", fontname="Helvetica"];
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11, color="#1F2937", penwidth=1.1, fillcolor="#F8FAFC", fontcolor="#111827", margin="0.12,0.06"];
+  edge [color="#6B7280", penwidth=1.1, arrowsize=0.75];
+
+  A [label="Login / Register", fillcolor="#DBEAFE", color="#2563EB"];
+  B [label="Dashboard", fillcolor="#EFF6FF", color="#3B82F6"];
+  C [label="Select Quiz Subject", fillcolor="#ECFDF5", color="#10B981"];
+  D [label="Start Session", fillcolor="#ECFDF5", color="#10B981"];
+  E [label="Load Question", fillcolor="#FEFCE8", color="#EAB308"];
+  F [label="Submit Answer", fillcolor="#FEFCE8", color="#EAB308"];
+  G [label="Record Attempt", fillcolor="#FFF7ED", color="#F97316"];
+  H [label="Adjust Difficulty", fillcolor="#FFF7ED", color="#F97316"];
+  I [label="Generate Recommendation", fillcolor="#F3E8FF", color="#8B5CF6"];
+  J [label="Next Question or End Session", fillcolor="#F8FAFC", color="#64748B"];
+
+  A -> B -> C -> D -> E -> F -> G -> H -> I -> J;
+  J -> B [label="Return", color="#94A3B8", fontcolor="#64748B"];
+}

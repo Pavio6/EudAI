@@ -7,6 +7,7 @@ from db.database import get_conn
 def add_recommendation(
     user_id: int,
     session_id: Optional[int],
+    subject: Optional[str],
     rec_type: str,
     message: str,
     metadata_json: Optional[dict] = None,
@@ -24,19 +25,27 @@ def add_recommendation(
 
     with get_conn() as conn:
         cursor = conn.execute(
-            "INSERT INTO recommendations (user_id, rec_type, rec_value, reason) VALUES (?, ?, ?, ?)",
-            (user_id, rec_type, message, reason_payload),
+            "INSERT INTO recommendations (user_id, subject, rec_type, rec_value, reason) VALUES (?, ?, ?, ?, ?)",
+            (user_id, subject, rec_type, message, reason_payload),
         )
         return cursor.lastrowid
 
 
-def get_latest_recommendations(user_id: int, limit: int = 3) -> List[Dict[str, Any]]:
+def get_latest_recommendations(
+    user_id: int, limit: int = 3, subject: Optional[str] = None
+) -> List[Dict[str, Any]]:
+    query = (
+        "SELECT rec_id, subject, rec_type, rec_value, reason, created_at "
+        "FROM recommendations WHERE user_id = ? "
+    )
+    params: list[Any] = [user_id]
+    if subject:
+        query += "AND subject = ? "
+        params.append(subject)
+    query += "ORDER BY created_at DESC LIMIT ?"
+    params.append(limit)
+
     with get_conn() as conn:
-        cursor = conn.execute(
-            "SELECT rec_id, rec_type, rec_value, reason, created_at "
-            "FROM recommendations WHERE user_id = ? "
-            "ORDER BY created_at DESC LIMIT ?",
-            (user_id, limit),
-        )
+        cursor = conn.execute(query, params)
         keys = [column[0] for column in cursor.description]
         return [dict(zip(keys, row)) for row in cursor.fetchall()]

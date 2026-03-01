@@ -1,0 +1,19 @@
+digraph G {
+  rankdir=LR;
+  graph [bgcolor="white", pad="0.2", nodesep="0.5", ranksep="0.8", fontname="Helvetica"];
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=12, color="#1F2937", penwidth=1.2, fillcolor="#F8FAFC", fontcolor="#111827", margin="0.12,0.08"];
+  edge [color="#6B7280", penwidth=1.2, arrowsize=0.8];
+
+  user [label="User", shape=oval, fillcolor="#DBEAFE", color="#2563EB", fontcolor="#1E3A8A"];
+  ui [label="UI Layer\n(ui/*.py)", fillcolor="#EFF6FF", color="#3B82F6"];
+  svc [label="Service Layer\n(services/*.py)", fillcolor="#ECFDF5", color="#10B981"];
+  model [label="Adaptive Logic\n(models/*.py)", fillcolor="#FEFCE8", color="#EAB308"];
+  db [label="SQLite Database\n(db/eduai.db)", shape=cylinder, fillcolor="#F3E8FF", color="#8B5CF6"];
+  tts [label="TTS Service\n(gTTS + local playback)", fillcolor="#FFF7ED", color="#F97316"];
+
+  user -> ui;
+  ui -> svc;
+  svc -> model;
+  svc -> db;
+  svc -> tts;
+}

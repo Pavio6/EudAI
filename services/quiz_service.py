@@ -28,11 +28,11 @@ def get_questions_by_topic(topic: str, limit: int = 10) -> List[Dict[str, Any]]:
         return [dict(zip(keys, row)) for row in cursor.fetchall()]
 
 
-def start_session(user_id: int) -> int:
+def start_session(user_id: int, subject: str) -> int:
     with get_conn() as conn:
         cursor = conn.execute(
-            "INSERT INTO sessions (user_id) VALUES (?)",
-            (user_id,),
+            "INSERT INTO sessions (user_id, subject) VALUES (?, ?)",
+            (user_id, subject),
         )
         return cursor.lastrowid
 

@@ -1,0 +1,20 @@
+/* Obsidian PDF export helpers for Mermaid diagrams */
+
+.markdown-preview-view .mermaid svg,
+.markdown-reading-view .mermaid svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Increase font readability in rendered diagrams */
+.markdown-preview-view .mermaid,
+.markdown-reading-view .mermaid {
+  font-size: 18px !important;
+}
+
+/* Keep diagrams from being split across pages in PDF */
+.markdown-preview-view .mermaid,
+.markdown-reading-view .mermaid {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}

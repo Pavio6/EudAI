@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS questions (
 CREATE TABLE IF NOT EXISTS sessions (
   session_id INTEGER PRIMARY KEY AUTOINCREMENT,
   user_id INTEGER NOT NULL,
+  subject TEXT NOT NULL DEFAULT 'Math',
   started_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
   ended_at TEXT,
   FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
@@ -51,6 +52,7 @@ CREATE TABLE IF NOT EXISTS attempts (
 CREATE TABLE IF NOT EXISTS recommendations (
   rec_id INTEGER PRIMARY KEY AUTOINCREMENT,
   user_id INTEGER NOT NULL,
+  subject TEXT,
   rec_type TEXT NOT NULL,
   rec_value TEXT NOT NULL,
   reason TEXT,

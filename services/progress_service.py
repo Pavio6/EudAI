@@ -3,7 +3,15 @@ from typing import Any, Dict, List, Optional
 from db.database import get_conn
 
 
-def log_attempt(user_id: int, question_id: int, selected_option: str, is_correct: bool, time_spent_sec: int = 0, session_id: int | None = None, used_tts: bool = False) -> int:
+def log_attempt(
+    user_id: int,
+    question_id: int,
+    selected_option: str,
+    is_correct: bool,
+    time_spent_sec: int = 0,
+    session_id: int | None = None,
+    used_tts: bool = False,
+) -> int:
     """Insert an attempt record and return its id."""
     with get_conn() as conn:
         cursor = conn.execute(
@@ -33,13 +41,20 @@ def recent_attempts(user_id: int, limit: int = 20) -> List[Dict[str, Any]]:
         return [dict(zip(keys, row)) for row in cursor.fetchall()]
 
 
-def get_overall_stats(user_id: int) -> Dict[str, Optional[float]]:
+def get_overall_stats(user_id: int, subject: Optional[str] = None) -> Dict[str, Optional[float]]:
+    query = (
+        "SELECT COUNT(*) AS total_attempts, SUM(a.is_correct) AS correct_attempts, AVG(a.time_spent_sec) AS avg_time_spent "
+        "FROM attempts a "
+        "JOIN questions q ON q.question_id = a.question_id "
+        "WHERE a.user_id = ?"
+    )
+    params: list[Any] = [user_id]
+    if subject:
+        query += " AND q.subject = ?"
+        params.append(subject)
+
     with get_conn() as conn:
-        cursor = conn.execute(
-            "SELECT COUNT(*) AS total_attempts, SUM(is_correct) AS correct_attempts, AVG(time_spent_sec) AS avg_time_spent "
-            "FROM attempts WHERE user_id = ?",
-            (user_id,),
-        )
+        cursor = conn.execute(query, params)
         row = cursor.fetchone() or (0, 0, None)
         total_attempts, correct_attempts, avg_time_spent = row
         accuracy = (correct_attempts or 0) / total_attempts if total_attempts else 0
@@ -51,13 +66,20 @@ def get_overall_stats(user_id: int) -> Dict[str, Optional[float]]:
         }
 
 
-def get_today_stats(user_id: int) -> Dict[str, int | float]:
+def get_today_stats(user_id: int, subject: Optional[str] = None) -> Dict[str, int | float]:
+    query = (
+        "SELECT COUNT(*) AS today_attempts, SUM(a.is_correct) AS correct_attempts "
+        "FROM attempts a "
+        "JOIN questions q ON q.question_id = a.question_id "
+        "WHERE a.user_id = ? AND DATE(a.created_at) = DATE('now')"
+    )
+    params: list[Any] = [user_id]
+    if subject:
+        query += " AND q.subject = ?"
+        params.append(subject)
+
     with get_conn() as conn:
-        cursor = conn.execute(
-            "SELECT COUNT(*) AS today_attempts, SUM(is_correct) AS correct_attempts "
-            "FROM attempts WHERE user_id = ? AND DATE(created_at) = DATE('now')",
-            (user_id,),
-        )
+        cursor = conn.execute(query, params)
         row = cursor.fetchone() or (0, 0)
         today_attempts, correct_attempts = row
         accuracy = (correct_attempts or 0) / today_attempts if today_attempts else 0
@@ -67,23 +89,30 @@ def get_today_stats(user_id: int) -> Dict[str, int | float]:
         }
 
 
-def get_recent_stats(user_id: int, n: int = 10) -> Dict[str, float]:
-    with get_conn() as conn:
-        cursor = conn.execute(
-            """
-            SELECT AVG(q.difficulty) AS avg_difficulty,
-                   AVG(a.is_correct) AS accuracy
-            FROM (
-                SELECT question_id, is_correct
-                FROM attempts
-                WHERE user_id = ?
-                ORDER BY created_at DESC
-                LIMIT ?
-            ) AS a
+def get_recent_stats(user_id: int, n: int = 10, subject: Optional[str] = None) -> Dict[str, float]:
+    query = """
+        SELECT AVG(q2.difficulty) AS avg_difficulty,
+               AVG(a.is_correct) AS accuracy
+        FROM (
+            SELECT a.question_id, a.is_correct
+            FROM attempts a
             JOIN questions q ON q.question_id = a.question_id
-            """,
-            (user_id, n),
-        )
+            WHERE a.user_id = ?
+    """
+    params: list[Any] = [user_id]
+    if subject:
+        query += " AND q.subject = ?"
+        params.append(subject)
+    query += """
+            ORDER BY a.created_at DESC
+            LIMIT ?
+        ) AS a
+        JOIN questions q2 ON q2.question_id = a.question_id
+    """
+    params.append(n)
+
+    with get_conn() as conn:
+        cursor = conn.execute(query, params)
         row = cursor.fetchone() or (None, None)
         avg_difficulty, accuracy = row
         return {
@@ -92,45 +121,48 @@ def get_recent_stats(user_id: int, n: int = 10) -> Dict[str, float]:
         }
 
 
-def get_last_attempt_difficulty(user_id: int) -> int:
+def get_last_attempt_difficulty(user_id: int, subject: Optional[str] = None) -> int:
+    query = (
+        "SELECT q.difficulty "
+        "FROM attempts a "
+        "JOIN questions q ON q.question_id = a.question_id "
+        "WHERE a.user_id = ?"
+    )
+    params: list[Any] = [user_id]
+    if subject:
+        query += " AND q.subject = ?"
+        params.append(subject)
+    query += " ORDER BY a.created_at DESC LIMIT 1"
+
     with get_conn() as conn:
-        cursor = conn.execute(
-            """
-            SELECT q.difficulty
-            FROM attempts a
-            JOIN questions q ON q.question_id = a.question_id
-            WHERE a.user_id = ?
-            ORDER BY a.created_at DESC
-            LIMIT 1
-            """,
-            (user_id,),
-        )
+        cursor = conn.execute(query, params)
         row = cursor.fetchone()
         if row:
             return int(row[0])
     return 1
 
 
-def get_last_session_summary(user_id: int) -> Dict[str, float | int | str | None]:
+def get_last_session_summary(user_id: int, subject: Optional[str] = None) -> Dict[str, float | int | str | None]:
+    query = """
+        SELECT s.session_id,
+               s.started_at,
+               s.ended_at,
+               COUNT(a.attempt_id) AS total_attempts,
+               SUM(a.is_correct) AS correct_attempts,
+               AVG(a.time_spent_sec) AS avg_time_spent,
+               SUM(a.used_tts) AS tts_count
+        FROM sessions s
+        LEFT JOIN attempts a ON a.session_id = s.session_id
+        WHERE s.user_id = ?
+    """
+    params: list[Any] = [user_id]
+    if subject:
+        query += " AND s.subject = ?"
+        params.append(subject)
+    query += " GROUP BY s.session_id ORDER BY s.started_at DESC LIMIT 1"
+
     with get_conn() as conn:
-        cursor = conn.execute(
-            """
-            SELECT s.session_id,
-                   s.started_at,
-                   s.ended_at,
-                   COUNT(a.attempt_id) AS total_attempts,
-                   SUM(a.is_correct) AS correct_attempts,
-                   AVG(a.time_spent_sec) AS avg_time_spent,
-                   SUM(a.used_tts) AS tts_count
-            FROM sessions s
-            LEFT JOIN attempts a ON a.session_id = s.session_id
-            WHERE s.user_id = ?
-            GROUP BY s.session_id
-            ORDER BY s.started_at DESC
-            LIMIT 1
-            """,
-            (user_id,),
-        )
+        cursor = conn.execute(query, params)
         row = cursor.fetchone()
         if not row:
             return {
@@ -168,25 +200,30 @@ def get_last_session_summary(user_id: int) -> Dict[str, float | int | str | None
         }
 
 
-def get_session_list(user_id: int, limit: int = 5) -> List[Dict[str, float | int | str | None]]:
+def get_session_list(
+    user_id: int, limit: int = 5, subject: Optional[str] = None
+) -> List[Dict[str, float | int | str | None]]:
+    query = """
+        SELECT s.session_id,
+               s.subject,
+               s.started_at,
+               s.ended_at,
+               COUNT(a.attempt_id) AS total_attempts,
+               SUM(a.is_correct) AS correct_attempts,
+               AVG(a.time_spent_sec) AS avg_time_spent_sec
+        FROM sessions s
+        LEFT JOIN attempts a ON a.session_id = s.session_id
+        WHERE s.user_id = ?
+    """
+    params: list[Any] = [user_id]
+    if subject:
+        query += " AND s.subject = ?"
+        params.append(subject)
+    query += " GROUP BY s.session_id ORDER BY s.started_at DESC LIMIT ?"
+    params.append(limit)
+
     with get_conn() as conn:
-        cursor = conn.execute(
-            """
-            SELECT s.session_id,
-                   s.started_at,
-                   s.ended_at,
-                   COUNT(a.attempt_id) AS total_attempts,
-                   SUM(a.is_correct) AS correct_attempts,
-                   AVG(a.time_spent_sec) AS avg_time_spent_sec
-            FROM sessions s
-            LEFT JOIN attempts a ON a.session_id = s.session_id
-            WHERE s.user_id = ?
-            GROUP BY s.session_id
-            ORDER BY s.started_at DESC
-            LIMIT ?
-            """,
-            (user_id, limit),
-        )
+        cursor = conn.execute(query, params)
         keys = [column[0] for column in cursor.description]
         rows = [dict(zip(keys, row)) for row in cursor.fetchall()]
         for item in rows:

@@ -1,0 +1,17 @@
+digraph ER {
+  rankdir=LR;
+  graph [bgcolor="white", pad="0.2", nodesep="0.7", ranksep="1.0", fontname="Helvetica"];
+  node [shape=record, style="rounded,filled", fontname="Helvetica", fontsize=11, color="#334155", penwidth=1.1, fillcolor="#F8FAFC", fontcolor="#0F172A"];
+  edge [color="#64748B", penwidth=1.1, arrowsize=0.8, fontname="Helvetica", fontsize=10, fontcolor="#334155"];
+
+  users [label="{USERS|PK user_id\lusername\lsen_profile\ltts_enabled\lhigh_contrast\l}", fillcolor="#EFF6FF", color="#3B82F6"];
+  questions [label="{QUESTIONS|PK question_id\lsubject\ltopic\ldifficulty\lcorrect_option\l}", fillcolor="#FEFCE8", color="#EAB308"];
+  sessions [label="{SESSIONS|PK session_id\lFK user_id\lsubject\lstarted_at\lended_at\l}", fillcolor="#ECFDF5", color="#10B981"];
+  attempts [label="{ATTEMPTS|PK attempt_id\lFK user_id\lFK session_id\lFK question_id\lis_correct\ltime_spent_sec\l}", fillcolor="#FFF7ED", color="#F97316"];
+  recs [label="{RECOMMENDATIONS|PK rec_id\lFK user_id\lsubject\lrec_type\lrec_value\l}", fillcolor="#F3E8FF", color="#8B5CF6"];
+
+  users -> sessions [label="1 : N", dir=both, arrowhead=none, arrowtail=none];
+  users -> attempts [label="1 : N", dir=both, arrowhead=none, arrowtail=none];
+  questions -> attempts [label="1 : N", dir=both, arrowhead=none, arrowtail=none];
+  users -> recs [label="1 : N", dir=both, arrowhead=none, arrowtail=none];
+}

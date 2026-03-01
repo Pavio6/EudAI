@@ -2,6 +2,13 @@ EduAI — Personalized Learning Assistant for SEN Students
 
 ## Overview
 EduAI is a desktop learning assistant focused on supporting students with special educational needs (SEN).
+Current quiz subjects:
+- Math
+- English
+
+In the dashboard you can:
+- choose quiz subject (`Math` or `English`) before starting a session
+- filter Overview/Sessions/Recommendations by subject (`All/Math/English`)
 
 ## Prerequisites
 - Python 3.10+ 
@@ -32,7 +39,6 @@ pip install gTTS
 
 ## Run
 ```bash
-python main.py
+python3 main.py
 ```
-
 

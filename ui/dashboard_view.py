@@ -10,9 +10,20 @@ from ui.widgets import card, danger_button, primary_button, secondary_button, se
 
 
 class DashboardView(ttkb.Frame):
+    SUBJECT_FILTERS = ("All", "Math", "English")
+    QUIZ_SUBJECTS = ("Math", "English")
+
     def __init__(self, parent: tk.Misc, controller) -> None:
         super().__init__(parent)
         self.controller = controller
+        filter_default = getattr(self.controller, "dashboard_subject_filter", "All")
+        quiz_default = getattr(self.controller, "selected_subject", "Math")
+        self.subject_filter_var = tk.StringVar(
+            value=filter_default if filter_default in self.SUBJECT_FILTERS else "All"
+        )
+        self.quiz_subject_var = tk.StringVar(
+            value=quiz_default if quiz_default in self.QUIZ_SUBJECTS else "Math"
+        )
         self._build_widgets()
 
     def _build_widgets(self) -> None:
@@ -85,11 +96,25 @@ class DashboardView(ttkb.Frame):
         nav = ttkb.Frame(self, padding=(SPACING_24, 6), bootstyle="light")
         nav.grid(row=1, column=0, sticky="ew")
         nav.columnconfigure(0, weight=1)
+        nav.columnconfigure(1, weight=0)
         nav_left = ttkb.Frame(nav)
         nav_left.grid(row=0, column=0, sticky="w")
         ttkb.Label(nav_left, text="Overview", style="Emphasis.TLabel").grid(row=0, column=0, padx=(0, 16))
         ttkb.Label(nav_left, text="Sessions", style="Emphasis.TLabel").grid(row=0, column=1, padx=(0, 16))
         ttkb.Label(nav_left, text="Recommendations", style="Emphasis.TLabel").grid(row=0, column=2)
+
+        nav_right = ttkb.Frame(nav)
+        nav_right.grid(row=0, column=1, sticky="e")
+        ttkb.Label(nav_right, text="Subject filter:").grid(row=0, column=0, padx=(0, 6))
+        self.subject_filter_combo = ttkb.Combobox(
+            nav_right,
+            textvariable=self.subject_filter_var,
+            values=self.SUBJECT_FILTERS,
+            state="readonly",
+            width=10,
+        )
+        self.subject_filter_combo.grid(row=0, column=1)
+        self.subject_filter_combo.bind("<<ComboboxSelected>>", self._on_subject_filter_change)
 
     def _build_sidebar(self, parent: ttkb.Frame) -> None:
         sidebar = ttkb.Frame(parent, padding=(SPACING_16, SPACING_16))
@@ -141,7 +166,7 @@ class DashboardView(ttkb.Frame):
         sessions_frame.columnconfigure(0, weight=1)
         sessions_frame.rowconfigure(0, weight=1)
 
-        columns = ("start", "end", "questions", "accuracy", "avg_time")
+        columns = ("subject", "start", "end", "questions", "accuracy", "avg_time")
         self.sessions_table = ttkb.Treeview(
             sessions_frame,
             columns=columns,
@@ -149,11 +174,13 @@ class DashboardView(ttkb.Frame):
             height=6,
         )
         self.sessions_table.grid(row=0, column=0, sticky="nsew")
+        self.sessions_table.heading("subject", text="Subject")
         self.sessions_table.heading("start", text="Start")
         self.sessions_table.heading("end", text="End")
         self.sessions_table.heading("questions", text="Questions")
         self.sessions_table.heading("accuracy", text="Accuracy")
         self.sessions_table.heading("avg_time", text="Avg Time")
+        self.sessions_table.column("subject", width=90, anchor="center", stretch=False)
         self.sessions_table.column("start", width=150, anchor="w", stretch=True)
         self.sessions_table.column("end", width=150, anchor="w", stretch=True)
         self.sessions_table.column("questions", width=90, anchor="center", stretch=False)
@@ -171,13 +198,15 @@ class DashboardView(ttkb.Frame):
         rec_frame.columnconfigure(0, weight=1)
         rec_frame.rowconfigure(0, weight=1)
 
-        rec_columns = ("time", "type", "message")
+        rec_columns = ("time", "subject", "type", "message")
         self.recs_table = ttkb.Treeview(rec_frame, columns=rec_columns, show="headings", height=6)
         self.recs_table.grid(row=0, column=0, sticky="nsew")
         self.recs_table.heading("time", text="Time")
+        self.recs_table.heading("subject", text="Subject")
         self.recs_table.heading("type", text="Type")
         self.recs_table.heading("message", text="Message")
         self.recs_table.column("time", width=140, anchor="w", stretch=False)
+        self.recs_table.column("subject", width=90, anchor="center", stretch=False)
         self.recs_table.column("type", width=90, anchor="center", stretch=False)
         self.recs_table.column("message", width=400, anchor="w", stretch=True)
 
@@ -195,10 +224,20 @@ class DashboardView(ttkb.Frame):
 
         btns = ttkb.Frame(footer)
         btns.grid(row=0, column=1, sticky="e")
+        ttkb.Label(btns, text="Quiz subject:").grid(row=0, column=0, padx=(0, 6))
+        self.quiz_subject_combo = ttkb.Combobox(
+            btns,
+            textvariable=self.quiz_subject_var,
+            values=self.QUIZ_SUBJECTS,
+            state="readonly",
+            width=10,
+        )
+        self.quiz_subject_combo.grid(row=0, column=1, padx=(0, 8))
+        self.quiz_subject_combo.bind("<<ComboboxSelected>>", self._on_quiz_subject_change)
         self.start_button = primary_button(btns, "Start Quiz", command=self.start_quiz)
-        self.start_button.grid(row=0, column=0, padx=(0, 8))
+        self.start_button.grid(row=0, column=2, padx=(0, 8))
         self.footer_settings_button = secondary_button(btns, "Settings", command=self.open_settings)
-        self.footer_settings_button.grid(row=0, column=1)
+        self.footer_settings_button.grid(row=0, column=3)
 
     def _card_row(self, parent: ttkb.Frame, row: int, label: str) -> ttkb.Label:
         ttkb.Label(parent, text=label).grid(row=row, column=0, sticky="w", pady=3)
@@ -217,6 +256,10 @@ class DashboardView(ttkb.Frame):
 
         self.subtitle_label.config(text=f"Welcome, {user.get('username', '-')}")
         self.sen_tag.config(text=f"Support: {user.get('sen_profile', '-')}")
+        self.subject_filter_var.set(
+            getattr(self.controller, "dashboard_subject_filter", self.subject_filter_var.get())
+        )
+        self.quiz_subject_var.set(getattr(self.controller, "selected_subject", self.quiz_subject_var.get()))
         self.tip_label.config(text=user_service.get_profile_tip(user.get("sen_profile")))
         self._refresh_stats()
 
@@ -243,9 +286,12 @@ class DashboardView(ttkb.Frame):
             self._reset_stats()
             return
 
-        overall = progress_service.get_overall_stats(user_id)
-        today = progress_service.get_today_stats(user_id)
-        recent = progress_service.get_recent_stats(user_id)
+        filter_value = self.subject_filter_var.get()
+        subject = filter_value if filter_value in self.QUIZ_SUBJECTS else None
+
+        overall = progress_service.get_overall_stats(user_id, subject=subject)
+        today = progress_service.get_today_stats(user_id, subject=subject)
+        recent = progress_service.get_recent_stats(user_id, subject=subject)
 
         total = overall.get("total_attempts", 0) or 0
         correct = overall.get("correct_attempts", 0) or 0
@@ -263,7 +309,7 @@ class DashboardView(ttkb.Frame):
         recent_acc_pct = f"{(recent.get('recent_accuracy', 0) or 0) * 100:.0f}%"
         self.recent_accuracy_label.config(text=recent_acc_pct)
 
-        last_session = progress_service.get_last_session_summary(user_id)
+        last_session = progress_service.get_last_session_summary(user_id, subject=subject)
         session_total = last_session.get("total_attempts", 0) or 0
         session_acc = f"{(last_session.get('accuracy', 0) or 0) * 100:.0f}%"
         session_avg = last_session.get("avg_time_spent_sec", 0) or 0
@@ -273,10 +319,11 @@ class DashboardView(ttkb.Frame):
         self.session_avg_time_label.config(text=f"{session_avg:.1f}")
         self.session_tts_label.config(text=str(session_tts))
 
-        sessions = progress_service.get_session_list(user_id, limit=5)
+        sessions = progress_service.get_session_list(user_id, limit=5, subject=subject)
         for item in self.sessions_table.get_children():
             self.sessions_table.delete(item)
         for idx, item in enumerate(sessions):
+            session_subject = item.get("subject") or "—"
             start = item.get("started_at") or "—"
             end = item.get("ended_at") or "—"
             total = item.get("total_attempts", 0) or 0
@@ -286,12 +333,12 @@ class DashboardView(ttkb.Frame):
             self.sessions_table.insert(
                 "",
                 "end",
-                values=(start, end, total, accuracy, avg_time_display),
+                values=(session_subject, start, end, total, accuracy, avg_time_display),
                 tags=("even" if idx % 2 == 0 else "odd",),
             )
         self._apply_table_stripes(self.sessions_table)
 
-        recs = recommendation_service.get_latest_recommendations(user_id, limit=3)
+        recs = recommendation_service.get_latest_recommendations(user_id, limit=3, subject=subject)
         for item in self.recs_table.get_children():
             self.recs_table.delete(item)
         if not recs:
@@ -300,13 +347,14 @@ class DashboardView(ttkb.Frame):
             self.rec_empty_label.lower()
             for idx, rec in enumerate(recs):
                 created_at = rec.get("created_at") or "—"
+                rec_subject = rec.get("subject") or "—"
                 rec_type = (rec.get("rec_type") or "general").lower()
                 rec_value = rec.get("rec_value") or ""
                 tag = self._rec_tag_for_type(rec_type)
                 self.recs_table.insert(
                     "",
                     "end",
-                    values=(created_at, rec_type, rec_value),
+                    values=(created_at, rec_subject, rec_type, rec_value),
                     tags=(tag, "even" if idx % 2 == 0 else "odd"),
                 )
         self._apply_table_stripes(self.recs_table)
@@ -334,7 +382,15 @@ class DashboardView(ttkb.Frame):
             messagebox.showerror("Error", "Please sign in first.")
             self.controller.show_frame("LoginView")
             return
+        self.controller.selected_subject = self.quiz_subject_var.get()
         self.controller.show_frame("QuizView")
+
+    def _on_subject_filter_change(self, _event=None) -> None:
+        self.controller.dashboard_subject_filter = self.subject_filter_var.get()
+        self._refresh_stats()
+
+    def _on_quiz_subject_change(self, _event=None) -> None:
+        self.controller.selected_subject = self.quiz_subject_var.get()
 
     def open_settings(self) -> None:
         self.controller.show_frame("SettingsView")
