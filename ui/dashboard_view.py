@@ -99,9 +99,7 @@ class DashboardView(ttkb.Frame):
         nav.columnconfigure(1, weight=0)
         nav_left = ttkb.Frame(nav)
         nav_left.grid(row=0, column=0, sticky="w")
-        ttkb.Label(nav_left, text="Overview", style="Emphasis.TLabel").grid(row=0, column=0, padx=(0, 16))
-        ttkb.Label(nav_left, text="Sessions", style="Emphasis.TLabel").grid(row=0, column=1, padx=(0, 16))
-        ttkb.Label(nav_left, text="Recommendations", style="Emphasis.TLabel").grid(row=0, column=2)
+        ttkb.Label(nav_left, text="Overview", style="Emphasis.TLabel").grid(row=0, column=0)
 
         nav_right = ttkb.Frame(nav)
         nav_right.grid(row=0, column=1, sticky="e")
